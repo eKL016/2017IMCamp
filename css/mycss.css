@@ -4,6 +4,7 @@
 	-webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
+  font-family:Microsoft JhengHei;
 }
 .slogan{
 	font-family: 'Noto Serif','Lobster', 'Playball','Pacifico',Microsoft JhengHei;
@@ -146,31 +147,32 @@
 #mainCont span.left {left: -100%;}
 #myBtnRegister{
   font-family: Microsoft JhengHei;
-  background:#1AAB8A;
+  background:rgb(233, 113, 98);
   color:#fff;
   border:none;
   position:relative;
   height:64px;
+  width:50%;
   font-size:24px;
   /*border-radius: 10px;*/
-  margin:2% 0px 0px 0px;
+  margin:3% 0px 0px 0px;
   cursor:pointer;
   transition:0.8s ease all;
   outline:none;
 }
 #myBtnRegister:hover{
   background:#fff;
-  color:#1AAB8A;
+  color:rgb(233, 113, 98);
 }
-#myBtnRegister#myBtnRegister:before,#myBtnRegister:after{
+#myBtnRegister:before,#myBtnRegister:after{
   content:'';
   position:absolute;
   top:0;
   right:0;
   height:2px;
   width:0;
-  background: #1AAB8A;
-  transition:400ms ease all;
+  background:rgb(233, 113, 98);
+  transition:0.3s ease all;
 }
 #myBtnRegister:after{
   right:inherit;
@@ -183,6 +185,7 @@
   transition:.8s ease all;
 }
 .myGallery{
+  /*position:absolute;*/
   display:inline-flex;
   height:22vh;
   width:20%;
@@ -206,24 +209,89 @@
   -webkit-animation-fill-mode: forwards;
   /*animation-play-state: paused;*/
   /*animation-timing-function: linear;*/
-  /*filter: none; /* IE6-9 */*/
+  /*filter: none; /* IE6-9 */
   /*-webkit-filter: grayscale(0);  Google Chrome, Safari 6+ & Opera 15+ */
 }
 @keyframes myGreytoColor {
-    from {filter: grayscale(1);}
-    to {filter: grayscale(0);}
+    from {filter: grayscale(1)}
+    to {filter: grayscale(0)}
 }
 @-webkit-keyframes myGreytoColor {
-    from {filter: grayscale(1);}
-    to {filter: grayscale(0);}
+    from {filter: grayscale(1)}
+    to {filter: grayscale(0)}
 }
 img{
 	width: 100%;
 }
+.closePhoto {
+  position: absolute;
+  top: 0px;
+  right: 1%;
+  margin:0;
+  padding:0;
+  font-size: 40px;
+  text-decoration: none;
+  color: #FFF;
+  text-align: center;
+  z-index: 99999;
+  cursor: pointer;
+}
+.activePhoto {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 600px !important;
+  height: 360px !important;
+  margin: auto;
+  -webkit-animation: in 200ms 1 ease;
+          animation: in 200ms 1 ease;
+  overflow: visible;
+  background: #333;
+}
+
+.inactivePhoto {
+  -webkit-animation: out 200ms 1 ease;
+          animation: out 200ms 1 ease;
+}
+
+@-webkit-keyframes in {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2)
+  }
+}
+
+@keyframes in {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2)
+  }
+}
+
+@-webkit-keyframes out {
+  100% {
+    -webkit-transform: scale(0.05);
+            transform: scale(0.05)
+  }
+}
+
+@keyframes out {
+  100% {
+    -webkit-transform: scale(0.05);
+            transform: scale(0.05)
+  }
+}
+/*.activePhoto img {
+  width: 100%;
+  height: auto;
+}*/
 .myTable{
 	width:70%;
 	color:#364F6B;
-	margin-left:15%;
+	margin:auto;
 	/*float:right;*/
 	/*border: 3px solid transparent;*/
 }
@@ -253,7 +321,6 @@ img{
   color: white;
   font-size: 18px;
 }
-
 /* Add this attribute to the element that needs a tooltip */
 [data-tooltip] {
   position: relative;
