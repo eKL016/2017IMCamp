@@ -13,12 +13,27 @@
 <form id="msform" class="form-inline">
   <!-- progressbar -->
   <ul id="progressbar">
-    <li class="active">基本資料</li>
+  	<li class="active">報名須知</li>
+    <li>基本資料</li>
     <li>聯絡資料</li>
     <li>個人資料</li>
   </ul>
 
   <!-- fieldsets -->
+  <fieldset id="set0">
+    <h2 class="fs-title">報名須知</h2>
+    <div class="form-group">
+		<div class="col-sm-10" style="text-align:center">
+			<div style="height:500px; background-color:#A9EEE6;margin:10px">
+				同意條款、退費須知...等
+			</div>
+			<input type="radio" name="check" value="non-checked" checked>我不同意
+			<input type="radio" name="check" value="checked">我同意
+		</div>
+	</div>
+	<input type="button" name="next" class="next action-button" value="Next" />
+  </fieldset>
+
   <fieldset id="set1">
     <h2 class="fs-title">基本資料</h2>
     <!-- 姓名、性別、出生年月日、身分證字號、(血型)、學校、年級、類組、特殊飲食習慣、葷素、特殊疾病、營服尺寸-->
@@ -101,7 +116,8 @@
 			<input type="radio" name="size" value="XL">XL
 		</div>
 	</div>
-	<input type="button" name="next" class="next action-button" value="Next" />
+	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
   </fieldset>
 
   <fieldset id="set2">
@@ -170,9 +186,21 @@
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="info">如何得知本營隊</label>
+	    <label class="control-label" for="info">想對我們說的話</label>
 		<div class="col-sm-10">
 			<textarea id="info" rows="2" cols="60"></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+	    <label class="control-label" for="info">如何得知本營隊</label>
+		<div class="col-sm-10">
+			<input type="checkbox" name="info" value="info1">FB粉專<br>
+			<input type="checkbox" name="info" value="info2">學校網站、輔導室<br>
+			<input type="checkbox" name="info" value="info3">杜鵑花節<br>
+			<input type="checkbox" name="info" value="info4">PTT<br>
+			<input type="checkbox" name="info" value="info5">親友介紹<br>
+			<input type="checkbox" name="info" value="info6">其他
+			<input type="text" name="info" placeholder="請簡述" style="width:50%;padding:2px">
 		</div>
 	</div>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
