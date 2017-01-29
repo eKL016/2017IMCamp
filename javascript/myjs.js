@@ -1,5 +1,6 @@
 AOS.init({
     duration: 1200,
+    // disable:window.innerWidth < 3000
 });
 $('.myGallery img').on('click', function(e) {
   e.preventDefault();
