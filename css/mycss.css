@@ -7,13 +7,12 @@
   font-family:Microsoft JhengHei;
 }
 body{
-  scrollbar-face-color: slategray;
-  scrollbar-track-color: #b8c0c8;
+  /*scrollbar-face-color: slategray;*/
+  /*scrollbar-track-color: #b8c0c8;*/
 }
-::-webkit-scrollbar {
+/*::-webkit-scrollbar {
   width: 0.8em;
   height: 0.5em;
-  /*border-radius: 10px;*/
 }
 
 ::-webkit-scrollbar-thumb {
@@ -23,8 +22,7 @@ body{
 
 ::-webkit-scrollbar-track {
   background-color:#edeadf;
-  /*border-radius: 10px;*/
-}
+}*/
 .slogan{
 	font-family: 'Noto Serif','Lobster', 'Playball','Pacifico',Microsoft JhengHei;
 	font-size:50px;
