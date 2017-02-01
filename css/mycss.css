@@ -513,3 +513,64 @@ img{
   -webkit-animation-delay: 2.8s;
           animation-delay: 2.8s;
 }
+/* Center the loader */
+#loaderBack{
+  width: 100%;
+  height: 100%;
+  background:#ccc;
+}
+@-webkit-keyframes showPage{
+  0%{filter:brightness(150%);}
+  100%{filter:none;}
+}
+@keyframes showPage{
+  0%{filter:brightness(150%);}
+  100%{filter:none;}
+}
+#loading{
+  position: absolute;
+  /*background: black;*/
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+}
+#loading i{
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #00b3d5;
+}
+#loading i:first-child{
+  animation:loading-ani2 0.5s linear infinite;
+  opacity: 0;
+  transform:translate(-20px);
+}
+#loading i:nth-child(2),
+#loading i:nth-child(3){
+  animation:loading-ani3 0.5s linear infinite;
+}
+#loading i:last-child{
+  animation:loading-ani1 0.5s linear infinite;
+}
+@keyframes loading-ani1{
+  100%{
+    transform:translate(40px);
+    opacity: 0;
+  }
+}
+@keyframes loading-ani2{
+  100%{
+    transform:translate(20px);
+    opacity: 1;
+  }
+}
+@keyframes loading-ani3{
+  100%{
+    transform:translate(20px);
+  }
+}
+#myDiv {display: none;}

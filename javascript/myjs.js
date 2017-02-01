@@ -17,6 +17,18 @@ $('body').delegate('.closePhoto', 'click', function() {
   $('.activePhoto').addClass('inactivePhoto');
   $('.activePhoto').remove();
 });
+//loader
+var loading;
+function myLoading() {
+    loading = setTimeout(showPage, 1500);
+}
+
+function showPage() {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("loaderBack").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+  document.getElementById("myDiv").style.animation = "showPage .8s";
+}
  // navbar
 (function($) {
     $(document).ready(function() {

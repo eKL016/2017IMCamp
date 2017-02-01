@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
 </head>
-<body id="page-top" data-spy="scroll" style="overflow-x:hidden;">
+<body id="page-top" data-spy="scroll" style="overflow-x:hidden;" onload="myLoading()">
+
+<div id="loaderBack"><div id="loading"><i></i><i></i><i></i><i></i></div></div>
+
+<div id="myDiv" style="height:100%">
     <!-- 回到頁首 -->
     <a id="myTop" class="page-scroll" href="#page-top">
         <div><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
@@ -251,6 +255,7 @@
             <p>Copyright &copy; 國立臺灣大學資訊管理營 2017 Designed by YuYuan</p>
         </div>
     </footer>
+</div>
 </body>
 <script src="./jquery/jquery.min.js"></script>
 <script src="./javascript/myjs.js"></script>
