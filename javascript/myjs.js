@@ -1,7 +1,22 @@
 AOS.init({
     duration: 1200,
-    // disable:window.innerWidth < 3000
 });
+//loader
+var loading;
+function myLoading() {
+    loading = setTimeout(showPage, 1500);
+}
+
+function showPage() {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("loaderBack").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+  AOS.init({
+    duration: 1200,
+  });
+  // document.getElementById("myDiv").style.animation = "showPage .8s";
+}
+//相片畫廊
 $('.myGallery img').on('click', function(e) {
   e.preventDefault();
   var id = $(this).attr('data-id');
@@ -17,18 +32,7 @@ $('body').delegate('.closePhoto', 'click', function() {
   $('.activePhoto').addClass('inactivePhoto');
   $('.activePhoto').remove();
 });
-//loader
-var loading;
-function myLoading() {
-    loading = setTimeout(showPage, 1500);
-}
 
-function showPage() {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("loaderBack").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-  document.getElementById("myDiv").style.animation = "showPage .8s";
-}
  // navbar
 (function($) {
     $(document).ready(function() {

@@ -208,8 +208,8 @@ body{
   width:20%;
   margin: 2px 0px 2px 0px;
   padding: 0px 5px 0px 5px;
-  filter: gray; /* IE6-9 */
-  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: opacity(70%); /* IE6-9 */
+  -webkit-filter: opacity(70%) /* Google Chrome, Safari 6+ & Opera 15+ */
   /*-webkit-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);*/
   /*-moz-box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);*/
   /*box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.75);*/
@@ -218,10 +218,10 @@ body{
 }
 .myGallery:hover {
   cursor:pointer;
-  animation: myGreytoColor .8s;
+  animation: myGreytoColor .5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  -webkit-animation: myGreytoColor .8s;
+  -webkit-animation: myGreytoColor .5s;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
   /*animation-play-state: paused;*/
@@ -230,12 +230,12 @@ body{
   /*-webkit-filter: grayscale(0);  Google Chrome, Safari 6+ & Opera 15+ */
 }
 @keyframes myGreytoColor {
-    from {filter: grayscale(1)}
-    to {filter: grayscale(0)}
+    from {filter: opacity(70%);}
+    to {filter: none}
 }
 @-webkit-keyframes myGreytoColor {
-    from {filter: grayscale(1)}
-    to {filter: grayscale(0)}
+    from {filter: opacity(70%);}
+    to {filter: none}
 }
 img{
 	width: 100%;
