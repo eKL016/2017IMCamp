@@ -4,7 +4,7 @@ AOS.init({
 //loader
 var loading;
 function myLoading() {
-    loading = setTimeout(showPage, 1500);
+    loading = setTimeout(showPage, 0);
 }
 
 function showPage() {
