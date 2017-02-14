@@ -193,3 +193,15 @@ body {
 	background: #F38181;
 	color:#625772;
 }
+
+#set0-content{
+	background-color:#A9EEE6;
+	margin:1vh 0px 2vh 0px;
+	padding:0.1vh 0px 0px 0px;
+	text-align:left;
+}
+.set0-title{
+	font-weight:600;
+	line-height:120%;
+	margin:10px 0px 2px 0px;
+}
