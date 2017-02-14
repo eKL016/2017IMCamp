@@ -12,7 +12,7 @@ body {
 /*form styles*/
 #msform {
 	width: 60%;
-	margin: 50px auto;
+	margin: 25px auto;
 	text-align: center;
 	position: relative;
 }
@@ -23,7 +23,7 @@ body {
     #msform{width:100%;}
     #msform fieldset{
     	width: 100%;
-    	margin: 0 5%;
+    	margin: 5px 5% 25px 5%;
     	padding: 5px 10px;
     }
     #progressbar li, #progressbar{font-size:10px;}
@@ -45,7 +45,7 @@ body {
 	padding: 20px 30px;
 	box-sizing: border-box;
 	width: 80%;
-	margin: 0 10%;
+	margin: 10px 10% 50px 10%;
 	/*stacking fieldsets above each other*/
 	position: relative;
 }
@@ -122,19 +122,20 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
-#msform .action-button:hover, #msform .action-button:focus {
+#msform .action-button:hover, #msform .action-button.hover_effect, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
 }
 .submit{
 	background:#48C9B0 !important;
 }
-.submit:hover, .submit:focus{
+.submit:hover, .submit.hover_effect, .submit:focus{
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #48C9B0 !important;
 }
 #register-heading{
  text-align:center;
  font-size:3.5vh;
- margin:3vh;
+ margin-top:2vh;
+ margin-bottom:0px;
 }
 /*headings*/
 .fs-title {
