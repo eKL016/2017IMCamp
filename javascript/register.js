@@ -76,9 +76,6 @@ $(".previous").click(function(){
 	});
 });
 
-$(document).ready(function() {
-    $('.hover').bind('touchstart touchend', function(e) {
-        e.preventDefault();
-        $(this).toggleClass('hover_effect');
-    });
-});
+// $(".submit").click(function(){
+// 	return false;
+// })

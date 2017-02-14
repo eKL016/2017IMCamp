@@ -122,13 +122,13 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
-#msform .action-button:hover, #msform .action-button.hover_effect, #msform .action-button:focus {
+#msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
 }
 .submit{
 	background:#48C9B0 !important;
 }
-.submit:hover, .submit.hover_effect, .submit:focus{
+.submit:hover, .submit:focus{
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #48C9B0 !important;
 }
 #register-heading{
