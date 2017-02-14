@@ -31,10 +31,8 @@ body {
     .fs-title{font-size:14px;}
     #msform input, #msform textarea{font-size:12px;}
 	.mobile-br{display:block;}
-    #msform .form-group input[type="radio"]{
-		margin:1vw 1vw 1vw 0px!important;
-		/*padding:0px;*/
-	}
+    #msform .form-group input[type="radio"]{margin:1vw 1vw 1vw 0px!important;}
+	#msform .action-button {width: 25vw !important;}
 }
 #msform .form-group{
 	text-align:left;
@@ -114,7 +112,7 @@ body {
 }
 /*buttons*/
 #msform .action-button {
-	width: 100px;
+	width: 10vw;
 	background: #F38181;
 	font-weight: bold;
 	color: white;
