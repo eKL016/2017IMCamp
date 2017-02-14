@@ -7,7 +7,7 @@ html {
 	height: 100%;
 }
 body {
-	font-family: montserrat, arial, verdana;
+	font-family: Microsoft JhengHei, montserrat, arial, verdana;
 }
 /*form styles*/
 #msform {
@@ -15,6 +15,26 @@ body {
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
+}
+.mobile-br{
+	display:none;
+}
+@media all and (max-width: 768px) {
+    #msform{width:100%;}
+    #msform fieldset{
+    	width: 100%;
+    	margin: 0 5%;
+    	padding: 5px 10px;
+    }
+    #progressbar li, #progressbar{font-size:10px;}
+    #msform{font-size:12px;}
+    .fs-title{font-size:14px;}
+    #msform input, #msform textarea{font-size:12px;}
+	.mobile-br{display:block;}
+    #msform .form-group input[type="radio"]{
+		margin:1vw 1vw 1vw 0px!important;
+		/*padding:0px;*/
+	}
 }
 #msform .form-group{
 	text-align:left;
@@ -106,6 +126,17 @@ body {
 }
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
+}
+.submit{
+	background:#48C9B0 !important;
+}
+.submit:hover, .submit:focus{
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #48C9B0 !important;
+}
+#register-heading{
+ text-align:center;
+ font-size:3.5vh;
+ margin:3vh;
 }
 /*headings*/
 .fs-title {
