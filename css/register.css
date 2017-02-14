@@ -11,7 +11,7 @@ body {
 }
 /*form styles*/
 #msform {
-	width: 50%;
+	width: 60%;
 	margin: 50px auto;
 	text-align: center;
 	position: relative;
@@ -19,7 +19,7 @@ body {
 #msform .form-group{
 	text-align:left;
 }
-#msform fieldset {
+#msform fieldset{
 	background: white;
 	border: 0 none;
 	border-radius: 3px;
@@ -46,7 +46,7 @@ body {
 	background:#E4F9F5;
 	font-size: 14px;
 }
-#msform input[type="text"]{
+#msform input[type="text"], #msform textarea{
 	width: 100%;
 }
 #msform .form-group input[type="radio"]{
