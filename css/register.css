@@ -7,19 +7,37 @@ html {
 	height: 100%;
 }
 body {
-	font-family: montserrat, arial, verdana;
+	font-family: Microsoft JhengHei, montserrat, arial, verdana;
 }
 /*form styles*/
 #msform {
-	width: 50%;
-	margin: 50px auto;
+	width: 60%;
+	margin: 25px auto;
 	text-align: center;
 	position: relative;
+}
+.mobile-br{
+	display:none;
+}
+@media all and (max-width: 768px) {
+    #msform{width:100%;}
+    #msform fieldset{
+    	width: 100%;
+    	margin: 5px 5% 25px 5%;
+    	padding: 5px 10px;
+    }
+    #progressbar li, #progressbar{font-size:10px;}
+    #msform{font-size:12px;}
+    .fs-title{font-size:14px;}
+    #msform input, #msform textarea{font-size:12px;}
+	.mobile-br{display:block;}
+    #msform .form-group input[type="radio"]{margin:1vw 1vw 1vw 0px!important;}
+	#msform .action-button {width: 25vw !important;}
 }
 #msform .form-group{
 	text-align:left;
 }
-#msform fieldset {
+#msform fieldset{
 	background: white;
 	border: 0 none;
 	border-radius: 3px;
@@ -27,7 +45,7 @@ body {
 	padding: 20px 30px;
 	box-sizing: border-box;
 	width: 80%;
-	margin: 0 10%;
+	margin: 10px 10% 50px 10%;
 	/*stacking fieldsets above each other*/
 	position: relative;
 }
@@ -46,7 +64,7 @@ body {
 	background:#E4F9F5;
 	font-size: 14px;
 }
-#msform input[type="text"]{
+#msform input[type="text"], #msform textarea{
 	width: 100%;
 }
 #msform .form-group input[type="radio"]{
@@ -94,7 +112,7 @@ body {
 }
 /*buttons*/
 #msform .action-button {
-	width: 100px;
+	width: 10vw;
 	background: #F38181;
 	font-weight: bold;
 	color: white;
@@ -106,6 +124,18 @@ body {
 }
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
+}
+.submit{
+	background:#48C9B0 !important;
+}
+.submit:hover, .submit:focus{
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #48C9B0 !important;
+}
+#register-heading{
+ text-align:center;
+ font-size:3.5vh;
+ margin-top:2vh;
+ margin-bottom:0px;
 }
 /*headings*/
 .fs-title {
@@ -162,4 +192,16 @@ body {
 #progressbar li.active:before,  #progressbar li.active:after{
 	background: #F38181;
 	color:#625772;
+}
+
+#set0-content{
+	background-color:#E4F9F5;
+	margin:1vh 0px 2vh 0px;
+	padding:0.1vh 0px 0px 0px;
+	text-align:left;
+}
+.set0-title{
+	font-weight:600;
+	line-height:120%;
+	margin:10px 0px 2px 0px;
 }
