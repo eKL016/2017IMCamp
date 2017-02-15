@@ -33,7 +33,7 @@ $('body').delegate('.closePhoto', 'click', function() {
   $('.activePhoto').remove();
 });
 
- // navbar
+ // navbar & JSON
 (function($) {
     $(document).ready(function() {
         // hide .navbar first
@@ -55,6 +55,7 @@ $('body').delegate('.closePhoto', 'click', function() {
             });
         });
     });
+
 }(jQuery));
 //Sample dates
 var dates = ["3/15/2017", "5/15/2017", "5/22/2017", "5/31/2017", "7/3/2017"];
@@ -103,7 +104,7 @@ function makeCircles() {
 
     //Draw first date circle
     $("#line").append('<div class="circle" id="circle0" style="left: ' + 0 + '%;"><div class="popupSpan">' + dateSpan(dates[0]) + '</div></div>');
-    
+
     $("#mainCont").append('<span id="span0" class="center">' + content[0] + '</span>');
 
     //Loop through middle dates
@@ -119,13 +120,13 @@ function makeCircles() {
 
       //Draw the date circle
       $("#line").append('<div class="circle" id="circle' + i + '" style="left: ' + relativeInt * 100 + '%;"><div class="popupSpan">' + dateSpan(dates[i]) + '</div></div>');
-      
+
       $("#mainCont").append('<span id="span' + i + '" class="right">' + content[i] + '</span>');
     }
 
     //Draw the last date circle
-    $("#line").append('<div class="circle" id="circle' + i + '" style="left: ' + 99 + '%;"><div class="popupSpan">' + dateSpan(dates[dates.length - 1]) + '</div></div>'); 
-    
+    $("#line").append('<div class="circle" id="circle' + i + '" style="left: ' + 99 + '%;"><div class="popupSpan">' + dateSpan(dates[dates.length - 1]) + '</div></div>');
+
     $("#mainCont").append('<span id="span' + i + '" class="right">' + content[i] + '</span>');
   }
 
@@ -151,10 +152,10 @@ function selectDate(selector) {
   $selector = "#" + selector;
   $spanSelector = $selector.replace("circle", "span");
   var current = $selector.replace("circle", "");
-  
+
   $(".active").removeClass("active");
   $($selector).addClass("active");
-  
+
   if ($($spanSelector).hasClass("right")) {
     $(".center").removeClass("center").addClass("left")
     $($spanSelector).addClass("center");
@@ -163,5 +164,5 @@ function selectDate(selector) {
     $(".center").removeClass("center").addClass("right");
     $($spanSelector).addClass("center");
     $($spanSelector).removeClass("left");
-  }; 
+  };
 };
