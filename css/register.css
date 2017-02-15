@@ -1,13 +1,10 @@
-/*custom font*/
-@import url(http://fonts.googleapis.com/css?family=Montserrat);
-
 /*basic reset*/
 * {margin: 0; padding: 0;}
 html {
 	height: 100%;
 }
 body {
-	font-family: Microsoft JhengHei, montserrat, arial, verdana;
+	font-family: Microsoft JhengHei, arial, verdana;
 }
 /*form styles*/
 #msform {
@@ -207,6 +204,5 @@ body {
 }
 /*validation的設定*/
 .warning{
-	/*font-family: Microsoft JhengHei, arial, verdana;*/
 	color:red;
 }
