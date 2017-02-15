@@ -48,9 +48,9 @@
     <!-- 姓名、性別、出生年月日、身分證字號、(血型)、學校、年級、類組、特殊飲食習慣、葷素、特殊疾病、營服尺寸-->
     <!-- <h3 class="fs-subtitle">This is step 1</h3> -->
     <div class="form-group">
-	    <label class="control-label" for="name">姓名:</label>
+	    <label class="control-label" for="username">姓名:</label>
 		<div class="col-sm-10">
-			<input type="text" name="name" placeholder="請輸入姓名">
+			<input type="text" name="username" placeholder="請輸入姓名">
 		</div>
 	</div>
 	<div class="form-group">
@@ -67,9 +67,18 @@
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="myId">身分證字號:</label>
+	    <label class="control-label" for="password">身分證字號:</label>
 		<div class="col-sm-10">
-			<input type="text" name="myId" placeholder="請輸入身分證字號">
+			<input type="text" name="password" placeholder="請輸入身分證字號">
+		</div>
+	</div>
+	<div class="form-group">
+	    <label class="control-label" for="bloodType">血型:</label>
+		<div class="col-sm-10">
+			<input type="radio" name="bloodType" value="O" checked>O
+			<input type="radio" name="bloodType" value="A">A
+			<input type="radio" name="bloodType" value="B">B
+			<input type="radio" name="bloodType" value="AB">AB
 		</div>
 	</div>
 	<div class="form-group">
@@ -88,33 +97,33 @@
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="group">類組:</label>
+	    <label class="control-label" for="type">類組:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="group" value="first" checked>一類組<br class="mobile-br">
-			<input type="radio" name="group" value="second">二類組<br class="mobile-br">
-			<input type="radio" name="group" value="third">三類組<br class="mobile-br">
-			<input type="radio" name="group" value="other">未分組
+			<input type="radio" name="type" value="first" checked>一類組<br class="mobile-br">
+			<input type="radio" name="type" value="second">二類組<br class="mobile-br">
+			<input type="radio" name="type" value="third">三類組<br class="mobile-br">
+			<input type="radio" name="type" value="other">未分組
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="eat">葷素:</label>
+	    <label class="control-label" for="vegan">葷素:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="eat" value="meat" checked>葷
-			<input type="radio" name="eat" value="veg">素
+			<input type="radio" name="vegan" value="meat" checked>葷
+			<input type="radio" name="vegan" value="veg">素
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="eatHabbit">特殊飲食習慣:</label>
+	    <label class="control-label" for="mSpecial">特殊飲食習慣:</label>
 		<div class="col-sm-10">
-			<input type="text" name="eatHabbit" placeholder="ex:不吃牛肉">
+			<input type="text" name="mSpecial" placeholder="ex:不吃牛肉">
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="disease">特殊疾病:</label>
+	    <label class="control-label" for="sSpecial">特殊疾病:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="disease" value="none" style="margin-bottom:0px" checked>無
-			<input type="radio" name="disease" value="yes" style="margin-bottom:0px">有
-			<input type="text" name="disease" placeholder="如果有，請詳述" style="margin-top:0px">
+			<input type="radio" name="sSpecial" value="none" style="margin-bottom:0px" checked>無
+			<input type="radio" name="sSpecial" value="yes" style="margin-bottom:0px">有
+			<input type="text" name="sSpecial" placeholder="如果有，請詳述" style="margin-top:0px">
 		</div>
 	</div>
 	<div class="form-group">
@@ -134,40 +143,40 @@
     <h2 class="fs-title">個人聯絡資料</h2>
     <!-- FB、Email、連絡電話、緊急聯絡人(名字、關係、電話)、(聯絡地址)-->
     <div class="form-group">
-	    <label class="control-label" for="myPhone">聯絡電話:</label>
+	    <label class="control-label" for="tel">聯絡電話:</label>
 		<div class="col-sm-10">
-			<input type="text" name="myPhone" placeholder="請輸入聯絡電話">
+			<input type="text" name="tel" placeholder="請輸入聯絡電話">
 		</div>
 	</div>
     <div class="form-group">
-	    <label class="control-label" for="fb">Facebook:</label>
+	    <label class="control-label" for="facebook">Facebook:</label>
 		<div class="col-sm-10">
-			<input type="text" name="fb" placeholder="請輸入fb帳號或網址">
+			<input type="text" name="facebook" placeholder="請輸入fb帳號或網址">
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="Email">Email:</label>
+	    <label class="control-label" for="email">Email:</label>
 		<div class="col-sm-10">
-			<input type="text" name="Email" placeholder="請輸入信箱">
+			<input type="text" name="email" placeholder="請輸入信箱">
 		</div>
 	</div>
 	<h2 class="fs-title">緊急聯絡人資料</h2>
 	<div class="form-group">
-	    <label class="control-label" for="Emergency">緊急聯絡人:</label>
+	    <label class="control-label" for="emergencyContact">緊急聯絡人:</label>
 		<div class="col-sm-10">
-			<input type="text" name="Emergency" placeholder="請輸入緊急聯絡人姓名">
+			<input type="text" name="emergencyContact" placeholder="請輸入緊急聯絡人姓名">
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="relation">關係:</label>
+	    <label class="control-label" for="emergencyRel">關係:</label>
 		<div class="col-sm-10">
-			<input type="text" name="relation" placeholder="請輸入與緊急聯絡人關係">
+			<input type="text" name="emergencyRel" placeholder="請輸入與緊急聯絡人關係">
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="myPhone2">緊急連絡電話:</label>
+	    <label class="control-label" for="emergencyTel">緊急連絡電話:</label>
 		<div class="col-sm-10">
-			<input type="text" name="myPhone2" placeholder="請輸入緊急聯絡人之手機號碼">
+			<input type="text" name="emergencyTel" placeholder="請輸入緊急聯絡人之手機號碼">
 		</div>
 	</div>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
@@ -178,39 +187,39 @@
     <h2 class="fs-title">個人資料</h2>
     <!-- 自我介紹、報名動機、對營隊的期許、(參加過的營隊)、如何得知本營隊 -->
 	<div class="form-group">
-	    <label class="control-label" for="intro">自我介紹(請簡述150字以內)</label>
+	    <label class="control-label" for="selfIntro">自我介紹(請簡述150字以內)</label>
 		<div class="col-sm-10">
-			<textarea id="intro" rows="10" cols="60"></textarea>
+			<textarea id="selfIntro" rows="10" cols="60"></textarea>
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="motive">報名動機(請簡述150字以內)</label>
+	    <label class="control-label" for="mot">報名動機(請簡述150字以內)</label>
 		<div class="col-sm-10">
-			<textarea id="motive" rows="10" cols="60"></textarea>
+			<textarea id="mot" rows="10" cols="60"></textarea>
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="expect">對營隊的期許(請簡述150字以內)</label>
+	    <label class="control-label" for="demand">對營隊的期許(請簡述150字以內)</label>
 		<div class="col-sm-10">
-			<textarea id="expect" rows="10" cols="60"></textarea>
+			<textarea id="demand" rows="10" cols="60"></textarea>
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="info">想對我們說的話</label>
+	    <label class="control-label" for="contactUs">想對我們說的話</label>
 		<div class="col-sm-10">
-			<textarea id="info" rows="2" cols="60"></textarea>
+			<textarea id="contactUs" rows="2" cols="60"></textarea>
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="info">如何得知本營隊</label>
+	    <label class="control-label" for="howToKnowUs">如何得知本營隊</label>
 		<div class="col-sm-10">
-			<input type="checkbox" name="info" value="info1">FB粉專<br>
-			<input type="checkbox" name="info" value="info2">學校網站、輔導室<br>
-			<input type="checkbox" name="info" value="info3">杜鵑花節<br>
-			<input type="checkbox" name="info" value="info4">PTT<br>
-			<input type="checkbox" name="info" value="info5">親友介紹<br>
-			<input type="checkbox" name="info" value="info6">其他
-			<input type="text" name="info" placeholder="請簡述" style="width:50%;padding:2px">
+			<input type="checkbox" name="howToKnowUs" value="info1">FB粉專<br>
+			<input type="checkbox" name="howToKnowUs" value="info2">學校網站、輔導室<br>
+			<input type="checkbox" name="howToKnowUs" value="info3">杜鵑花節<br>
+			<input type="checkbox" name="howToKnowUs" value="info4">PTT<br>
+			<input type="checkbox" name="howToKnowUs" value="info5">親友介紹<br>
+			<input type="checkbox" name="howToKnowUs" value="info6">其他
+			<input type="text" name="howToKnowUs" placeholder="請簡述" style="width:50%;padding:2px">
 		</div>
 	</div>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
