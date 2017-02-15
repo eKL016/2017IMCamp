@@ -152,19 +152,3 @@ jQuery.extend(jQuery.validator.messages, {
   max: $.validator.format("請輸入小於等於 {0} 的值."),
   min: $.validator.format("請輸入大於等於 {0} 的值.")
 });
-
-$(".submit").click(function(){
-	//Submission starts from here.
-	var reg = $('#msform').serializeObject();
-	$.ajax({
-		type: 'POST',
-		url: 'http://localhost:3000/register',//到時候會變成正確的位置
-		data: JSON.stringify(reg),
-		success: function(data){
-			//完成之後的callback，data為上面的值
-		},
-		contentType: "application/json",
-		dataType: 'json'
-	});
-	return false;
-})

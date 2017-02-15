@@ -205,3 +205,8 @@ body {
 	line-height:120%;
 	margin:10px 0px 2px 0px;
 }
+/*validation的設定*/
+.warning{
+	/*font-family: Microsoft JhengHei, arial, verdana;*/
+	color:red;
+}

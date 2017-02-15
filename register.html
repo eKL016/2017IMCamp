@@ -7,6 +7,7 @@
   <title>2017 IM Camp Registration</title>
   <link rel="stylesheet" href="./css/register.css">
   <link rel="stylesheet" href="./css/mycss.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <!-- multistep form -->
@@ -23,24 +24,25 @@
   <!-- fieldsets -->
   <fieldset id="set0">
     <h2 class="fs-title">報名須知</h2>
-    <div class="form-group">
-		<div class="col-sm-10" style="text-align:center">
-			<div id="set0-content">
-				<div class="set0-title">※活動名稱：</div>　2017國立台灣大學資訊管理營<br>
-				<div class="set0-title">※主辦單位：</div>　國立臺灣大學資訊管理學系學會<br>
-				<div class="set0-title">※活動宗旨：</div>　臺大資管系特別為全國高中生舉辦為期四天三夜的暑期營隊，希望藉由本營隊增進學員們對臺大資管系的認識。本營隊將教導實用的電腦應用技能，與實務上的商業設計和行銷，讓高中生對於資訊管理能有更深入的了解，進 而啟發興趣。並期望他們能認識有相同興趣的同好，留下一段美好的友誼和回憶。<br>
-				<div class="set0-title">※活動性質：</div>　大學暑期營隊(給高中生)<br>
-				<div class="set0-title">※活動對象：</div>　全國各公私立高級中學學生，預計招收100名學員。<br>
-				<div class="set0-title">※活動日期：</div>　2017年7月3日(一)至7月6日(四)，共四天三夜。<br>
-				<div class="set0-title">※活動地點：</div>　國立臺灣大學校總區(台北市大安區羅斯福路四段一號)<br>
-				<div class="set0-title">※活動費用：</div>　新台幣5000元整。含保險、食宿、交通、教材⋯等等。團報另有優惠。<br>
-				<div class="set0-title">※繳費須知：</div>　本團隊將於2017年5月22日公布錄取名單，並寄發繳費通知至各學員所留之電子信箱。錄取學員繳費後，若放棄參加資格，可於時限內申請部分退費。退費規則將與繳費通知一併寄發，請同學特別注意!<br><br>
+	<div class="col-sm-10" style="text-align:center;">
+		<div id="set0-content">
+			<div class="set0-title">※活動名稱：</div>　2017國立台灣大學資訊管理營<br>
+			<div class="set0-title">※主辦單位：</div>　國立臺灣大學資訊管理學系學會<br>
+			<div class="set0-title">※活動宗旨：</div>　臺大資管系特別為全國高中生舉辦為期四天三夜的暑期營隊，希望藉由本營隊增進學員們對臺大資管系的認識。本營隊將教導實用的電腦應用技能，與實務上的商業設計和行銷，讓高中生對於資訊管理能有更深入的了解，進 而啟發興趣。並期望他們能認識有相同興趣的同好，留下一段美好的友誼和回憶。<br>
+			<div class="set0-title">※活動性質：</div>　大學暑期營隊(給高中生)<br>
+			<div class="set0-title">※活動對象：</div>　全國各公私立高級中學學生，預計招收100名學員。<br>
+			<div class="set0-title">※活動日期：</div>　2017年7月3日(一)至7月6日(四)，共四天三夜。<br>
+			<div class="set0-title">※活動地點：</div>　國立臺灣大學校總區(台北市大安區羅斯福路四段一號)<br>
+			<div class="set0-title">※活動費用：</div>　新台幣5000元整。含保險、食宿、交通、教材⋯等等。團報另有優惠。<br>
+			<div class="set0-title">※繳費須知：</div>　本團隊將於2017年5月22日公布錄取名單，並寄發繳費通知至各學員所留之電子信箱。錄取學員繳費後，若放棄參加資格，可於時限內申請部分退費。退費規則將與繳費通知一併寄發，請同學特別注意!<br><br>
+		</div>
+		<div class="form-group" style="text-align: center;margin-bottom:1vh">
+			<div class="col-sm-10">
+				<input type="radio" name="check" value="checked">我同意
 			</div>
-			<input type="radio" name="check" value="non-checked" checked>我不同意
-			<input type="radio" name="check" value="checked">我同意
 		</div>
 	</div>
-	<input type="button" name="next" class="next action-button" value="Next" />
+	<input type="button" name="next" class="next action-button" value="Next" id="page1"/>
   </fieldset>
 
   <fieldset id="set1">
@@ -56,7 +58,7 @@
 	<div class="form-group">
 	    <label class="control-label" for="gender">性別:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="gender" value="male" checked>生理男
+			<input type="radio" name="gender" value="male">生理男
 			<input type="radio" name="gender" value="female">生理女
 		</div>
 	</div>
@@ -75,7 +77,7 @@
 	<div class="form-group">
 	    <label class="control-label" for="bloodType">血型:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="bloodType" value="O" checked>O
+			<input type="radio" name="bloodType" value="O" >O
 			<input type="radio" name="bloodType" value="A">A
 			<input type="radio" name="bloodType" value="B">B
 			<input type="radio" name="bloodType" value="AB">AB
@@ -91,7 +93,7 @@
 	    <label class="control-label" for="grade">年級:</label>
 		<div class="col-sm-10">
 			<input type="radio" name="grade" value="0">升高一<br class="mobile-br">
-			<input type="radio" name="grade" value="1" checked>升高二<br class="mobile-br">
+			<input type="radio" name="grade" value="1" >升高二<br class="mobile-br">
 			<input type="radio" name="grade" value="2">升高三<br class="mobile-br">
 			<input type="radio" name="grade" value="3">升大一
 		</div>
@@ -99,7 +101,7 @@
 	<div class="form-group">
 	    <label class="control-label" for="type">類組:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="type" value="first" checked>一類組<br class="mobile-br">
+			<input type="radio" name="type" value="first" >一類組<br class="mobile-br">
 			<input type="radio" name="type" value="second">二類組<br class="mobile-br">
 			<input type="radio" name="type" value="third">三類組<br class="mobile-br">
 			<input type="radio" name="type" value="other">未分組
@@ -108,34 +110,36 @@
 	<div class="form-group">
 	    <label class="control-label" for="vegan">葷素:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="vegan" value="meat" checked>葷
+			<input type="radio" name="vegan" value="meat">葷
 			<input type="radio" name="vegan" value="veg">素
 		</div>
 	</div>
 	<div class="form-group">
 	    <label class="control-label" for="mSpecial">特殊飲食習慣:</label>
 		<div class="col-sm-10">
-			<input type="text" name="mSpecial" placeholder="ex:不吃牛肉">
+			<input type="radio" name="mSpecial" value="none" style="margin-bottom:0px" >無
+			<input type="radio" name="mSpecial" value="yes" style="margin-bottom:0px" id="mSpecial-yes">有
+			<input type="text" name="mSpecialText" placeholder="ex:不吃牛肉" style="margin-top:0px">
 		</div>
 	</div>
 	<div class="form-group">
 	    <label class="control-label" for="sSpecial">特殊疾病:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="sSpecial" value="none" style="margin-bottom:0px" checked>無
-			<input type="radio" name="sSpecial" value="yes" style="margin-bottom:0px">有
-			<input type="text" name="sSpecial" placeholder="如果有，請詳述" style="margin-top:0px">
+			<input type="radio" name="sSpecial" value="none" style="margin-bottom:0px" >無
+			<input type="radio" name="sSpecial" value="yes" style="margin-bottom:0px" id="sSpecial-yes">有
+			<input type="text" name="sSpecialText" placeholder="如果有，請詳述" style="margin-top:0px">
 		</div>
 	</div>
 	<div class="form-group">
 	    <label class="control-label" for="size">營服尺寸:</label>
 		<div class="col-sm-10">
-			<input type="radio" name="size" value="S" checked>S
+			<input type="radio" name="size" value="S" >S
 			<input type="radio" name="size" value="M">M
 			<input type="radio" name="size" value="L">L
 			<input type="radio" name="size" value="XL">XL
 		</div>
 	</div>
-	<input type="button" name="previous" class="previous action-button" value="Previous" />
+	<!-- <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
     <input type="button" name="next" class="next action-button" value="Next" />
   </fieldset>
 
@@ -179,7 +183,7 @@
 			<input type="text" name="emergencyTel" placeholder="請輸入緊急聯絡人之手機號碼">
 		</div>
 	</div>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <!-- <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
     <input type="button" name="next" class="next action-button" value="Next" />
   </fieldset>
 
@@ -222,14 +226,15 @@
 			<input type="text" name="howToKnowUs" placeholder="請簡述" style="width:50%;padding:2px">
 		</div>
 	</div>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <!-- <input type="button" name="previous" class="previous action-button" value="Previous" /> -->
     <input type="submit" name="submit" class="submit action-button" value="Submit" />
   </fieldset>
 </form>
 </body>
+
 <script src="./jquery/jquery.min.js"></script>
 <script src='./jquery/jquery.easing.min.js'></script>
 <script src='./javascript/jquery-serialize-object.js'></script>
+<script src='http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.js'></script>
 <script src="./javascript/register.js"></script>
-
 </html>
