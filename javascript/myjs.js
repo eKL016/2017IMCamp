@@ -5,6 +5,9 @@ AOS.init({
 var loading;
 function myLoading() {
     loading = setTimeout(showPage, 0);
+    // $("#loading").fadeOut(1000);
+    // $("#loaderBack").fadeOut();
+    // $("#myDiv").show();
 }
 
 function showPage() {
@@ -21,42 +24,40 @@ $('.myGallery img').on('click', function(e) {
   e.preventDefault();
   var id = $(this).attr('data-id');
   var img = $(this).attr('src');
-  console.log(img);
   $('body').append('<div class="activePhoto"><img src="' + img + '" /><span class="closePhoto""><i class="fa fa-times-circle" aria-hidden="true"></i></span></div>');
 });
-// 立即報名的按鈕 -> 報名頁面
-document.getElementById("myBtnRegister").onclick = function () {
-    location.href = "register.html";
-};
-$('body').delegate('.closePhoto', 'click', function() {
+$('body').on('click','.closePhoto',function() {
   $('.activePhoto').addClass('inactivePhoto');
   $('.activePhoto').remove();
 });
 
- // navbar & JSON
-(function($) {
-    $(document).ready(function() {
-        // hide .navbar first
-        $(".navbar").hide();
-        $("#myTop").hide();
-        // fade in .navbar
-        $(function() {
-            $(window).scroll(function() {
-                // set distance user needs to scroll before we start fadeIn
-                var position = screen.height * 0.75;
-                var height = screen.height;
-                if ($(this).scrollTop() > position) {
-                    $('.navbar').fadeIn();
-                    $('#myTop').fadeIn();
-                } else {
-                    $('.navbar').fadeOut();
-                    $('#myTop').fadeOut();
-                }
-            });
-        });
-    });
+// 立即報名的按鈕 -> 報名頁面
+$("#myBtnRegister").on('click',function(){
+  location.href = "register.html";
+});
 
-}(jQuery));
+// navbar & JSON
+$(document).ready(function() {
+    // hide .navbar first
+  $(".navbar").hide();
+  $("#myTop").hide();
+  // fade in .navbar
+  $(function() {
+    $(window).scroll(function() {
+        // set distance user needs to scroll before we start fadeIn
+        var position = screen.height * 0.75;
+        var height = screen.height;
+        if ($(this).scrollTop() > position) {
+            $('.navbar').fadeIn();
+            $('#myTop').fadeIn();
+        } else {
+            $('.navbar').fadeOut();
+            $('#myTop').fadeOut();
+        }
+    });
+  });
+});
+
 //Sample dates
 var dates = ["3/15/2017", "5/15/2017", "5/22/2017", "5/31/2017", "7/3/2017"];
 //For the purpose of stringifying MM/DD/YYYY date format
@@ -166,3 +167,27 @@ function selectDate(selector) {
     $($spanSelector).removeClass("left");
   };
 };
+
+
+// 按下首頁的"確認報名"後，跳出popup確認
+$("#myBtnCheck").on('click', function(){
+  $("#popupCheck").fadeIn();
+  $("#popupCheck div").show();
+  $("#checkSubmit").show();
+  $("#popupCheck #checkImg").hide();
+  $("#popupCheck").addClass('activePopup');
+});
+// 按右上角的叉叉，popup關閉
+$('body').on('click','.closePhoto', function() {
+  $("#popupCheck").fadeOut();
+});
+// 按下方的"Check"，會回傳報名狀況
+$("#checkSubmit").on('click', function(){
+  $("#popupCheck div").hide();
+  $("#checkSubmit").hide();
+  $("#popupCheck #checkImg").fadeIn();
+  // if(報名成功)
+    $("#popupCheck #checkImg").html("報名成功");
+  // else //尚未報名或失敗
+    // $("#popupCheck #checkImg").html("尚未報名");
+});
