@@ -167,3 +167,24 @@ function selectDate(selector) {
     $($spanSelector).removeClass("left");
   };
 };
+
+
+// 按下首頁的"確認報名"後，跳出popup確認
+$("#myBtnCheck").on('click', function(){
+  $("#popupCheck").show();
+  $("#popupCheck").addClass('activePopup');
+});
+// 按右上角的叉叉，popup關閉
+$('body').on('click','.closePhoto', function() {
+  $('#popupCheck').addClass('inactivePopup');
+  $('#popupCheck').remove();
+});
+// 按下方的"Check"，會回傳報名狀況
+$("#checkSubmit").on('click', function(){
+  $("#popupCheck div").remove();
+  $("#checkSubmit").hide();
+  // if(報名成功)
+    $("#popupCheck").append("<div style='color:black'>報名成功</div>");
+  // else //尚未報名或失敗
+    // $("#popupCheck").append("<div style='color:black'>尚未報名</div>");
+});

@@ -155,7 +155,8 @@
                 <div data-aos="fade-up">活動期間：2016/07/04 (一) ~ 07/07 (四)<br></div>
                 <div data-aos="fade-down">活動地點：國立臺灣大學校總區<br></div>
                 <div data-aos="fade-up">主辦單位：國立臺灣大學資訊管理學系學生會</div>
-                <button data-aos="fade-down" id="myBtnRegister">立即報名!</button>
+                <button data-aos="fade-down" id="myBtnRegister">立即報名</button>
+                <button data-aos="fade-down" id="myBtnCheck">確認報名</button>
             </div>
         </div>
         <div class="col-md-6 myTimeLine" data-aos="zoom-in-down">
@@ -165,8 +166,23 @@
             </div>
             <div id="mainCont"></div>
         </div>
+        <!-- 確認報名狀況的popup -->
+        <div id="popupCheck" style="display:none;color:black">
+            <span class="closePhoto" style="color:#ccc"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    姓名:<input type="text" name="checkname" placeholder="請輸入姓名">
+                </div>
+            </div>
+            <div class="form-group">       
+                <div class="col-sm-10">
+                    身分證字號:<input type="text" name="checkpassword" placeholder="請輸入身分證字號">
+                </div>
+            </div>
+            <input type="submit" name="submit" class="submit action-button" value="Check" id="checkSubmit"/>
+        </div>
     </div>
-
+    
     <!--歷年回顧-->
     <div id="review"  class="container content-section text-center" style="background-color:#9EF5CF;height:100%;width:100%">
         <div class="row" data-aos="fade-up">

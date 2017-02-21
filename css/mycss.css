@@ -6,23 +6,6 @@
           box-sizing: border-box;
   font-family:Microsoft JhengHei;
 }
-body{
-  /*scrollbar-face-color: slategray;*/
-  /*scrollbar-track-color: #b8c0c8;*/
-}
-/*::-webkit-scrollbar {
-  width: 0.8em;
-  height: 0.5em;
-}
-
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color:#ffc72e;
-}
-
-::-webkit-scrollbar-track {
-  background-color:#edeadf;
-}*/
 
 .slogan{
 	font-family: 'Noto Serif','Lobster', 'Playball','Pacifico',Microsoft JhengHei;
@@ -163,7 +146,7 @@ body{
 #mainCont span.right {left: 200%;}
 #mainCont span.center {left: 0% !important;}
 #mainCont span.left {left: -100%;}
-#myBtnRegister{
+#myBtnRegister, #myBtnCheck{
   font-family: Microsoft JhengHei;
   background:rgb(233, 113, 98);
   color:#fff;
@@ -178,11 +161,11 @@ body{
   transition:0.8s ease all;
   outline:none;
 }
-#myBtnRegister:hover{
+#myBtnRegister:hover, #myBtnCheck:hover{
   background:#fff;
   color:rgb(233, 113, 98);
 }
-#myBtnRegister:before,#myBtnRegister:after{
+#myBtnRegister:before,#myBtnRegister:after,#myBtnCheck:before,#myBtnCheck:after{
   content:'';
   position:absolute;
   top:0;
@@ -192,13 +175,13 @@ body{
   background:rgb(233, 113, 98);
   transition:0.3s ease all;
 }
-#myBtnRegister:after{
+#myBtnRegister:after,#myBtnCheck:after{
   right:inherit;
   top:inherit;
   left:0;
   bottom:0;
 }
-#myBtnRegister:hover:before,#myBtnRegister:hover:after{
+#myBtnRegister:hover:before,#myBtnRegister:hover:after,#myBtnCheck:hover:before,#myBtnCheck:hover:after{
   width:100%;
   transition:.8s ease all;
 }
@@ -572,3 +555,307 @@ img{
   }
 }
 #myDiv {display: none;}
+
+
+.activePopup{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 50vh !important;
+  height: 50vh !important;
+  margin: auto;
+  padding:2vh;
+  -webkit-animation: in 500ms 1 ease;
+          animation: in 500ms 1 ease;
+  overflow: visible;
+  background: white;
+  /*border-radius:10px;*/
+  box-shadow:2px 2px 2px 2px rgba(20%,20%,40%,0.5);
+  text-align:center;
+  vertical-align: middle;
+  line-height:5vh;
+}
+#regpopup img{
+  width: 20vh;
+  margin:auto;
+  margin-bottom:1vh;
+  padding:1vh;
+}
+#regpopup div :first-child {
+  width: 20vh;
+  margin:auto;
+  padding:1vh;
+  margin-bottom:1vh;
+  background:black;
+  border-radius:100%;
+}
+#regpopBtn{
+  width: 20vh;
+  margin:1vh 15vh 2vh 0px;
+  padding:2vh;
+  position:absolute;
+  bottom:0px;
+  right:0px;
+  background: #F38181;
+  color:white;
+  cursor:pointer;
+}
+#regpopBtn:hover{
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
+}
+.inactivePopup {
+  -webkit-animation: out 200ms 1 ease;
+          animation: out 200ms 1 ease;
+}
+
+@-webkit-keyframes in {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2)
+  }
+}
+
+@keyframes in {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2)
+  }
+}
+
+@-webkit-keyframes out {
+  100% {
+    -webkit-transform: scale(0.05);
+            transform: scale(0.05)
+  }
+}
+
+@keyframes out {
+  100% {
+    -webkit-transform: scale(0.05);
+            transform: scale(0.05)
+  }
+}
+/*basic reset*/
+* {margin: 0; padding: 0;}
+html {
+  height: 100%;
+}
+body {
+  font-family: Microsoft JhengHei, arial, verdana;
+}
+/*form styles*/
+#msform {
+  width: 60%;
+  margin: 25px auto;
+  text-align: center;
+  position: relative;
+}
+.mobile-br{
+  display:none;
+}
+@media all and (max-width: 768px) {
+    #msform{width:100%;}
+    #msform fieldset{
+      width: 100%;
+      margin: 5px 5% 25px 5%;
+      padding: 5px 10px;
+    }
+    #progressbar li, #progressbar{font-size:10px;}
+    #msform{font-size:12px;}
+    .fs-title{font-size:14px;}
+    #msform input, #msform textarea{font-size:12px;}
+  .mobile-br{display:block;}
+    #msform .form-group input[type="radio"]{margin:1vw 1vw 1vw 0px!important;}
+  #msform .action-button {width: 25vw !important;}
+}
+#msform .form-group{
+  text-align:left;
+}
+#msform fieldset{
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 10px 10% 50px 10%;
+  /*stacking fieldsets above each other*/
+  position: relative;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform .form-group{
+  margin:5px 0px 25px 0px;
+}
+#msform input, #msform textarea{
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  background:#E4F9F5;
+  font-size: 14px;
+}
+#msform input[type="text"], #msform textarea{
+  width: 100%;
+}
+#msform .form-group input[type="radio"]{
+  margin:0px 5px 0px 15px;
+  background-color: transparent;
+  border: 0.1em solid #47d1da;
+  border-radius: 50%;
+  vertical-align: middle;
+  position:relative;
+  box-shadow: inset 0 0 0 0 #47d1da;
+  cursor: pointer;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+#msform .form-group input[type="radio"]:first-child{
+  margin:0px 5px 0px 0px;
+}
+#msform input[type="radio"]:checked {
+  background-color: #47d1da;
+  box-shadow: inset 0 0 0 .1875em white;
+  -webkit-transition: background .15s, box-shadow .5s;
+  transition: background .15s, box-shadow .5s;
+}
+#msform label{
+  margin:15px 0px 15px 0px;
+}
+#msform input[type="checkbox"]{
+  margin:0px 10px 0px 0px;
+  background-color: transparent;
+  border: 0.1em solid #47d1da;
+  vertical-align: middle;
+  position:relative;
+  box-shadow: inset 0 0 0 0 #47d1da;
+  cursor: pointer;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+#msform input[type="checkbox"]:checked{
+  background-color: #47d1da;
+  box-shadow: inset 0 0 0 .1875em white;
+  -webkit-transition: background .15s, box-shadow .5s;
+  transition: background .15s, box-shadow .5s;
+}
+/*buttons*/
+#msform .action-button {
+  width: 10vw;
+  background: #F38181;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover, #msform .action-button:focus {
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
+}
+.submit{
+  background:#48C9B0 !important;
+}
+.submit:hover, .submit:focus{
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #48C9B0 !important;
+}
+#register-heading{
+ text-align:center;
+ font-size:3.5vh;
+ margin-top:2vh;
+ margin-bottom:0px;
+}
+/*headings*/
+.fs-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #2C3E50;
+  margin-bottom: 10px;
+}
+/*progressbar*/
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+  counter-reset: step;
+}
+#progressbar li {
+  list-style-type: none;
+  color:#625772;
+  text-transform: uppercase;
+  font-size: 16px;
+  width: 25%;
+  float: left;
+  position: relative;
+}
+#progressbar li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #625772;
+  background: #A9EEE6;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progressbar connectors*/
+#progressbar li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #A9EEE6;
+  position: absolute;
+  left: -50%;
+  top: 9px;
+  z-index: -1; /*put it behind the numbers*/
+}
+#progressbar li:first-child:after {
+  /*connector not needed before the first step*/
+  content: none; 
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progressbar li.active:before,  #progressbar li.active:after{
+  background: #F38181;
+  color:#625772;
+}
+
+#set0-content{
+  background-color:#E4F9F5;
+  margin:1vh 0px 2vh 0px;
+  padding:0.1vh 0px 0px 0px;
+  text-align:left;
+}
+.set0-title{
+  font-weight:600;
+  line-height:120%;
+  margin:10px 0px 2px 0px;
+}
+/*validation的設定*/
+.warning{
+  color:red;
+}
+
+#checkSubmit{
+  width:100px;
+  height:40px;
+  font-size:24px;
+  box-shadow: none !important;
+  padding:5px;
+  margin:10px 0px 10px 35%;
+  border:none !important;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+}
