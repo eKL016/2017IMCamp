@@ -6,54 +6,58 @@ $.validator.addMethod("usernameRegex", function(value, element) {
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
+var form = $("#msform");
+var exclamation = "<i class='fa fa-exclamation-triangle warning' aria-hidden='true'></i><span class='warning' style='font-family:Microsoft JhengHei'>";
 
+var getReg = function(){
+  var reg = $('#msform').serializeObject();
+  console.table(reg.howToKnowUs);
+  return reg;
+};
 $(".next").click(function(){
-  var form = $("#msform");
   form.validate({
     rules: {
-      // check:{required:true}, //radio
-      // username:{required:true},
-      // gender:{required:true}, //radio
-      // birthday:{required:true},
-      // password:{required:true},
-      // bloodType:{required:true}, //radio
-      // school:{required:true},
-      // grade:{required:true}, //radio
-      // type:{required:true}, //radio
-      // vegan:{required:true}, //radio
-      // mSpecial:{required:true}, //radio
-      // mSpecialText:{required:'#mSpecial-yes:checked'},
-      // sSpecial:{required:true}, //radio
-      // sSpecialText:{required:'#sSpecial-yes:checked'},
-      // size:{required:true}, //radio
-      // tel:{required:true},
-      // facebook:{required:true}, //radio
-      // email:{required:true},
-      // emergencyContact:{required:true},
-      // emergencyRel:{required:true},
-      // emergencyTel:{required:true},
-      // selfIntro:{required:true},
-      // mot:{required:true},
-      // demand:{required:true},
-      // // contactUs:{required:true},
-      // howToKnowUs:{required:true}
+      check:{required:true}, //radio
+      username:{required:true},
+      gender:{required:true}, //radio
+      birthday:{required:true,date:true,dateISO:true},
+      password:{required:true},
+      bloodType:{required:true}, //radio
+      school:{required:true},
+      grade:{required:true}, //radio
+      type:{required:true}, //radio
+      vegan:{required:true}, //radio
+      mSpecial:{required:true}, //radio
+      mSpecialText:{required:'#mSpecial-yes:checked'},
+      sSpecial:{required:true}, //radio
+      sSpecialText:{required:'#sSpecial-yes:checked'},
+      size:{required:true}, //radio
+      tel:{required:true,digits:true},
+      facebook:{required:true},
+      email:{required:true,email:true},
+      emergencyContact:{required:true},
+      emergencyRel:{required:true},
+      emergencyTel:{required:true,digits:true},
+      selfIntro:{required:true,maxlength:180},
+      mot:{required:true,maxlength:180},
+      demand:{required:true,maxlength:180},
     },
     messages: {
       mSpecialText:{
-        required:"<i class='fa fa-exclamation-triangle warning' aria-hidden='true'></i><span class='warning' style='font-family:Microsoft JhengHei'>請詳述</span>"
+        required: exclamation + "請詳述</span>"
       },
       sSpecialText:{
-        required:"<i class='fa fa-exclamation-triangle warning' aria-hidden='true'></i><span class='warning' style='font-family:Microsoft JhengHei'>請詳述</span>"
+        required: exclamation + "請詳述</span>"
       },
       facebook:{
-        required:"<i class='fa fa-exclamation-triangle warning' aria-hidden='true'></i><span class='warning' style='font-family:Microsoft JhengHei'>此欄位為必填，若無請填'無'</span>"
+        required: exclamation + "此欄位為必填，若無請填'無'</span>"
       }
     },
     errorPlacement: function(error, element){
       error.appendTo( element.parents('.form-group') );
     }
   });
-  if ($("#msform").valid() === true){
+  if (form.valid() === true){
     // if(animating) return false;
     animating = true;
 
@@ -129,44 +133,51 @@ $(".next").click(function(){
 
 // 用來修改預設的規則的錯誤文字;
 jQuery.extend(jQuery.validator.messages, {
-  required: "<i class='fa fa-exclamation-triangle warning' aria-hidden='true'></i><span class='warning' style='font-family:Microsoft JhengHei'>此欄位必填</span>",
-  remote: "Please fix this field.",
-  email: "請輸入正確的 Email 信箱.",
-  date: "請輸入正確的日期.",
-  dateISO: "請輸入正確的 (ISO) 日期格式.",
-  number: "本欄位請填入數字.",
-  digits: "本欄位請填入數字.",
-  creditcard: "請輸入正確的信用卡號.",
-  equalTo: "請再次輸入相同的值.",
-  maxlength: $.validator.format("至多輸入 {0} 個字."),
-  minlength: $.validator.format("至少輸入 {0} 個字."),
-  rangelength: $.validator.format("請輸入 {0} 到 {1} 個字."),
-  range: $.validator.format("請輸入 {0} 到 {1} 的數字."),
-  max: $.validator.format("請輸入小於等於 {0} 的值."),
-  min: $.validator.format("請輸入大於等於 {0} 的值.")
+  required: exclamation + "此欄位必填</span>",
+  remote: exclamation + "Please fix this field</span>",
+  email: exclamation + "請輸入正確的 Email 信箱</span>",
+  date: exclamation + "請輸入正確的日期</span>",
+  dateISO: exclamation + "請輸入正確的日期格式</span>",
+  number: exclamation + "本欄位請填入數字</span>",
+  digits: exclamation + "本欄位請填入數字</span>",
+  equalTo: exclamation + "請再次輸入相同的值</span>",
+  maxlength: exclamation + "至多輸入 150 個字</span>",
+  minlength: $.validator.format(exclamation + "至少輸入 {0} 個字</span>"),
+  rangelength: $.validator.format(exclamation + "請輸入 {0} 到 {1} 個字</span>"),
+  range: $.validator.format(exclamation + "請輸入 {0} 到 {1} 的數字</span>"),
+  max: $.validator.format(exclamation + "請輸入小於等於 {0} 的值</span>"),
+  min: $.validator.format(exclamation + "請輸入大於等於 {0} 的值</span>"),
+  // notEqualsto:"此處請勿留白"
 });
+
 
 $(".submit").click(function(){
 	//Submission starts from here.
-	var reg = $('#msform').serializeObject();
+  if(form.valid() === false){
+    event.preventDefault();
+    return false;
+  }
 	$.ajax({
 		type: 'POST',
-		url: 'http://localhost:3000/register',//到時候會變成正確的位置
-		data: JSON.stringify(reg),
-		success: function(data){
-			//完成之後的callback，data為上面的值
-		},
+		url: './register',//到時候會變成正確的位置
+		data: JSON.stringify(getReg()),
 		contentType: "application/json",
-		dataType: 'json'
+		dataType: 'json',
+    success: function(data,Textmsg){
+      if(data.msg==="success"){
+        $("#regpopup").fadeIn();
+        $("#regpopup").addClass('activePopup');
+      }
+      else{
+        return alert(data.msg[0].toString());
+      };
+    }
 	});
-  
-//按submit後popup，popup的動畫從activePopup的css設定 
-  // $("#regpopup").fadeIn();
-  // $("#regpopup").addClass('activePopup');
+
 	return false;
 })
 
 // 當點擊popup上的"OK!"按鈕，popup會關閉，並連結到首頁
 $(document).on('click', "#regpopBtn", function() {
-  location.href = "index.html";
+  location.href = "/";
 });

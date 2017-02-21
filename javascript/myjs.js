@@ -33,7 +33,7 @@ $('body').on('click','.closePhoto',function() {
 
 // 立即報名的按鈕 -> 報名頁面
 $("#myBtnRegister").on('click',function(){
-  location.href = "register.html";
+  location.href = "register";
 });
 
 // navbar & JSON
@@ -183,11 +183,26 @@ $('body').on('click','.closePhoto', function() {
 });
 // 按下方的"Check"，會回傳報名狀況
 $("#checkSubmit").on('click', function(){
-  $("#popupCheck div").hide();
+  $("#popupCheck div").not("#checkImg").hide();
   $("#checkSubmit").hide();
-  $("#popupCheck #checkImg").fadeIn();
-  // if(報名成功)
-    $("#popupCheck #checkImg").html("報名成功");
-  // else //尚未報名或失敗
-    // $("#popupCheck #checkImg").html("尚未報名");
+  $.ajax({
+		type: 'POST',
+		url: './check',//到時候會變成正確的位置
+		data: JSON.stringify({"email":$("#email").val(),
+    "password":$("#password").val()}),
+		contentType: "application/json",
+		dataType: 'json',
+    success: function(data,Textmsg){
+      console.log(data);
+      if(data.msg==="existed"){
+        $("#popupCheck #checkImg").html("報名成功");
+      }
+      else{
+        $("#popupCheck #checkImg").html("尚未報名");
+      };
+      $("#checkImg").fadeIn();
+    }
+	});
+
+
 });
