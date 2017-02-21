@@ -161,15 +161,12 @@ $(".submit").click(function(){
 	});
   
 //按submit後popup，popup的動畫從activePopup的css設定 
-  // $("#regpopup").show();
+  // $("#regpopup").fadeIn();
   // $("#regpopup").addClass('activePopup');
 	return false;
 })
 
 // 當點擊popup上的"OK!"按鈕，popup會關閉，並連結到首頁
-// $(document).on('click', "#regpopBtn", function() {
-//   $('.activePopup').addClass('inactivePopup');
-//   $('.activePopup').remove();
-//   location.href = "index.html";
-// });
-
+$(document).on('click', "#regpopBtn", function() {
+  location.href = "index.html";
+});

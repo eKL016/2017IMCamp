@@ -568,8 +568,8 @@ img{
   height: 50vh !important;
   margin: auto;
   padding:2vh;
-  -webkit-animation: in 500ms 1 ease;
-          animation: in 500ms 1 ease;
+  /*-webkit-animation: in 500ms 1 ease;*/
+          /*animation: in 500ms 1 ease;*/
   overflow: visible;
   background: white;
   /*border-radius:10px;*/
@@ -607,8 +607,8 @@ img{
   box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
 }
 .inactivePopup {
-  -webkit-animation: out 200ms 1 ease;
-          animation: out 200ms 1 ease;
+  /*-webkit-animation: out 200ms 1 ease;*/
+          /*animation: out 200ms 1 ease;*/
 }
 
 @-webkit-keyframes in {
