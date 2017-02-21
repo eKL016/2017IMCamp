@@ -11,32 +11,32 @@ $(".next").click(function(){
   var form = $("#msform");
   form.validate({
     rules: {
-      check:{required:true}, //radio
-      username:{required:true},
-      gender:{required:true}, //radio
-      birthday:{required:true},
-      password:{required:true},
-      bloodType:{required:true}, //radio
-      school:{required:true},
-      grade:{required:true}, //radio
-      type:{required:true}, //radio
-      vegan:{required:true}, //radio
-      mSpecial:{required:true}, //radio
-      mSpecialText:{required:'#mSpecial-yes:checked'},
-      sSpecial:{required:true}, //radio
-      sSpecialText:{required:'#sSpecial-yes:checked'},
-      size:{required:true}, //radio
-      tel:{required:true},
-      facebook:{required:true}, //radio
-      email:{required:true},
-      emergencyContact:{required:true},
-      emergencyRel:{required:true},
-      emergencyTel:{required:true},
-      selfIntro:{required:true},
-      mot:{required:true},
-      demand:{required:true},
-      // contactUs:{required:true},
-      howToKnowUs:{required:true}
+      // check:{required:true}, //radio
+      // username:{required:true},
+      // gender:{required:true}, //radio
+      // birthday:{required:true},
+      // password:{required:true},
+      // bloodType:{required:true}, //radio
+      // school:{required:true},
+      // grade:{required:true}, //radio
+      // type:{required:true}, //radio
+      // vegan:{required:true}, //radio
+      // mSpecial:{required:true}, //radio
+      // mSpecialText:{required:'#mSpecial-yes:checked'},
+      // sSpecial:{required:true}, //radio
+      // sSpecialText:{required:'#sSpecial-yes:checked'},
+      // size:{required:true}, //radio
+      // tel:{required:true},
+      // facebook:{required:true}, //radio
+      // email:{required:true},
+      // emergencyContact:{required:true},
+      // emergencyRel:{required:true},
+      // emergencyTel:{required:true},
+      // selfIntro:{required:true},
+      // mot:{required:true},
+      // demand:{required:true},
+      // // contactUs:{required:true},
+      // howToKnowUs:{required:true}
     },
     messages: {
       mSpecialText:{
@@ -159,5 +159,17 @@ $(".submit").click(function(){
 		contentType: "application/json",
 		dataType: 'json'
 	});
+  
+//按submit後popup，popup的動畫從activePopup的css設定 
+  // $("#regpopup").show();
+  // $("#regpopup").addClass('activePopup');
 	return false;
 })
+
+// 當點擊popup上的"OK!"按鈕，popup會關閉，並連結到首頁
+// $(document).on('click', "#regpopBtn", function() {
+//   $('.activePopup').addClass('inactivePopup');
+//   $('.activePopup').remove();
+//   location.href = "index.html";
+// });
+

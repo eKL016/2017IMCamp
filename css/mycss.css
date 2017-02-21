@@ -302,10 +302,7 @@ img{
             transform: scale(0.05)
   }
 }
-/*.activePhoto img {
-  width: 100%;
-  height: auto;
-}*/
+
 .myTable{
 	width:70%;
 	color:#364F6B;
