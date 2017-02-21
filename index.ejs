@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>2017 IM Camp</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.css">
+    <link rel="stylesheet" type="text/css" href="./css/mycss.css">
+    <link rel="stylesheet" type="text/css" href="./css/theme.css">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
+</head>
+<body id="page-top" data-spy="scroll" style="overflow-x:hidden;" onload="myLoading()">
+
+<div id="loaderBack"><div id="loading"><i></i><i></i><i></i><i></i></div></div>
+
+<div id="myDiv" style="height:100%">
+    <!-- 回到頁首 -->
+    <a id="myTop" class="page-scroll" href="#page-top">
+        <div><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" style="background-color:#FF9999">
+        <div class="container">
+            <div class="collapse navbar-collapse navbar-left navbar-main-collapse">
+                <ul class="nav navbar-nav" style="font-size:18px;font-family: Microsoft JhengHei;">
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a class="page-scroll" href="#campInfo">
+                        <i class="fa fa-paper-plane-o" aria-hidden="true"></i>營隊介紹
+                        </a></li>
+                    <li><a class="page-scroll" href="#dailyInfo">
+                        <i class="fa fa-calendar" aria-hidden="true"></i>活動簡介
+                    </a></li>
+                    <li><a class="page-scroll" href="#register">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>報名資訊
+                    </a></li>
+                    <li><a class="page-scroll" href="#review">
+                        <i class="fa fa-camera-retro" aria-hidden="true"></i>歷年回顧
+                    </a></li>
+                    <li><a class="page-scroll" href="#contact">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>聯絡我們
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 封面頁 -->
+    <header class="intro">
+        <div class="container intro-body" style="background-color:#FFEBB7;color:#E67A7A;">
+        <!-- 頁首標題 -->
+        <div class="row">
+            <div class="col-md-4" style="float:left">
+                <!-- <img src="C:/Users/user/Desktop/IM Camp/trans.gif" style="width:250px;height:250px;border-radius: 100%;margin:5% 0px 0px 45%;position:absolute;z-index:1;top:0px;left: 0px">
+                <div class="slogan">IMfinity</div> -->
+            </div>
+             <!-- class="col-md-5" -->
+            <div>
+                <h1>
+                    <span class="slogan">IMfinity 創業時代</span>
+                    <!-- <span class="brand-heading" style="text-shadow:5px 5px #ccc"></span> -->
+                </h1>
+                <p class="intro-text">2017國立臺灣大學資訊管理營</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="">
+                <a class="page-scroll" href="#campInfo"><div class="myBlock" style="color:white !important;background-color:#0278AE">營隊介紹</div></a>
+                <a class="page-scroll" href="#dailyInfo"><div class="myBlock" style="color:white !important;background-color:#00E0FF">活動簡介</div></a>
+                <a class="page-scroll" href="#register"><div class="myBlock" style="color:white !important;background-color:#51DACF">報名資訊</div></a>
+                <a class="page-scroll" href="#review"><div class="myBlock" style="color:white !important;background-color:#9EF5CF">歷年回顧</div></a>
+                <a class="page-scroll" href="#contact"><div class="myBlock" style="color:white !important;background-color:#95E1D3">聯絡我們</div></a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <!--營隊介紹-->
+    <div id="campInfo" class="container content-section text-center" style="background-color:#0278AE;height:100%;width:100%">
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-3 col-sm-4 col-xs-6 myTitle">營隊介紹</div>
+        </div>
+        <div class="row">
+            <img src="./photo/together.jpg" style="width:44%;float:left;margin:1% 0px 0px 5%" data-aos="fade-down">
+            <div style="width:300px;height:300px;background:#ccc;float:left;margin:1% 0px 0px 5%;font-size:30px">文宣一</div>
+        </div>
+    </div>
+
+    <!--活動簡介-->
+    <div id="dailyInfo" class="container content-section text-center" style="background-color:#00E0FF;height:100%;width:100%">
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-3 col-sm-4 col-xs-6 myTitle">活動簡介</div>
+        </div>
+        <!-- class="col-md-3 col-sm-4 col-xs-6" -->
+        <div class="row">
+            <table class="myTable">
+                <tr class='days' data-aos="zoom-in-up">
+                  <td data-aos="flip-right">7/3 星期一</td>
+                  <td data-aos="flip-left">7/4 星期二</td>
+                  <td data-aos="flip-right">7/5 星期三</td>
+                  <td data-aos="flip-left">7/6 星期四</td>
+                </tr>
+                <tr>
+                  <td class="day1" data-aos="zoom-in-right" rowspan="2"><i class="fa fa-suitcase" aria-hidden="true"></i>　開幕儀式</td>
+                  <td class="day2" data-aos="zoom-in-up"><i class="fa fa-cutlery" aria-hidden="true"></i>　早餐+早操</td>
+                  <td class="day3" data-aos="zoom-in-down">早餐+早操　<i class="fa fa-cutlery" aria-hidden="true"></i></td>
+                  <td rowspan="2" class="day4" data-aos="zoom-in-left">呈現準備</td>
+                </tr>
+                <tr>
+                  <td class="day2" data-aos="zoom-in-down">網頁課程　<i class="fa fa-desktop" aria-hidden="true"></i></td>
+                  <td class="day3" data-aos="zoom-in-up">創意課程</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="myLunch" data-aos="zoom-in-up">午餐時間</td>
+                </tr>
+                <tr>
+                  <td class="day1" data-aos="zoom-in-right">資管講座</td>
+                  <td rowspan="2" class="day2" data-aos="zoom-in-up"><i class="fa fa-building" aria-hidden="true"></i>　企業參訪</td>
+                  <td rowspan="2" class="day3" data-aos="zoom-in-down">RPG</td>
+                  <td rowspan="2" class="day4" data-aos="zoom-in-left"><i class="fa fa-graduation-cap" aria-hidden="true"></i>　小隊呈現</td>
+                </tr>
+                <tr>
+                  <td class="day1" data-aos="zoom-in-left">大地遊戲　<i class="fa fa-globe" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                  <td rowspan="2" class="day1" data-aos="zoom-in-right">晚會</td>
+                  <td rowspan="2" class="day2" data-aos="zoom-in-down">BBQ</td>
+                  <td class="day3" data-aos="zoom-in-up">舞會　<i class="fa fa-glass" aria-hidden="true"></i></td>
+                  <td rowspan="2" class="day4" data-aos="zoom-in-right">回家啦~　<i class="fa fa-bed" aria-hidden="true"></i></td>
+                </tr>
+                <tr>
+                  <td class="day3" data-aos="zoom-in-down">Casino</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!--報名資訊-->
+    <div id="register" class="container content-section text-center" style="background-color:#51DACF;height:100%;width:100%">
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-3 col-sm-4 col-xs-6 myTitle">報名資訊</div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-6">
+            <div style="font-size:24px;text-align:left;margin:2% 0px 0px 5%">
+                <div data-aos="fade-up">招生對象：共 100 名全台各地高中職學生<br></div>
+                <div data-aos="fade-down">報名時間：2016/03/12 ~ 2016/05/15<br></div>
+                <div data-aos="fade-up">報名方式：線上報名<br></div>
+                <div data-aos="fade-down">報名費用：5000 元 (另有清寒生專案)<br></div>
+                <div data-aos="fade-up">活動期間：2016/07/04 (一) ~ 07/07 (四)<br></div>
+                <div data-aos="fade-down">活動地點：國立臺灣大學校總區<br></div>
+                <div data-aos="fade-up">主辦單位：國立臺灣大學資訊管理學系學生會</div>
+                <button data-aos="fade-down" id="myBtnRegister">立即報名</button>
+                <button data-aos="fade-down" id="myBtnCheck">確認報名</button>
+            </div>
+        </div>
+        <div class="col-md-6 myTimeLine" data-aos="zoom-in-down">
+            <div id="lineCont">
+                <div id="line"></div>
+                <div id="span">Date Placeholder</div>
+            </div>
+            <div id="mainCont"></div>
+        </div>
+        <!-- 確認報名狀況的popup -->
+        <div id="popupCheck" style="display:none;color:black">
+            <span class="closePhoto" style="color:#ccc"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    Email:<input id="email" type="text" name="checkname" placeholder="請輸入Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-10">
+                    身分證字號:<input id="password" type="text" name="checkpassword" placeholder="請輸入身分證字號">
+                </div>
+            </div>
+            <div id="checkImg" style='color:black'>報名成功</div>
+            <input type="submit" name="submit" class="submit action-button" value="Check" id="checkSubmit"/>
+        </div>
+    </div>
+
+    <!--歷年回顧-->
+    <div id="review"  class="container content-section text-center" style="background-color:#9EF5CF;height:100%;width:100%">
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-3 col-sm-4 col-xs-6 myTitle">歷年回顧</div>
+        </div>
+        <div class="row" style="width:80%;margin:auto">
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="fade-down-right">
+                <img src="./photo/day1-1.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in-down">
+                <img src="./photo/day1-2.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in-down">
+                <img src="./photo/day1-3.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in-down">
+                <img src="./photo/day1-4.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="fade-down-left">
+                <img src="./photo/day1-5.jpg"/>
+            </div>
+        </div>
+        <div class="row" style="width:80%;margin:auto">
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="fade-right">
+                <img src="./photo/day2-1.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in">
+                <img src="./photo/day2-2.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in">
+                <img src="./photo/day2-3.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in">
+                <img src="./photo/day3-1.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="fade-left">
+                <img src="./photo/day3-2.jpg"/>
+            </div>
+        </div>
+        <div class="row" style="width:80%;margin:auto">
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="fade-up-right">
+                <img src="./photo/day3-3.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in-up">
+                <img src="./photo/day3-4.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in-up">
+                <img src="./photo/day4-1.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="zoom-in-up">
+                <img src="./photo/day4-2.jpg"/>
+            </div>
+            <div class="col-md-3 col-sm-4 col-xs-6 myGallery" data-aos="fade-up-left">
+                <img src="./photo/day4-3.jpg"/>
+            </div>
+        </div>
+    </div>
+    <!-- </section> -->
+
+    <!--聯絡我們-->
+    <div id="contact" class="container content-section text-center" style="background-color:#95E1D3;height:100%;width:100%">
+        <div class="row" data-aos="fade-up">
+            <div class="col-md-3 col-sm-4 col-xs-6 myTitle">聯絡我們</div>
+        </div>
+        <div class="row" style="font-size:24px;margin:5% 0px 0px 20%">
+            <img src="./photo/desk.jpg" style="width:300px;height:300px;border-radius:100%;float:left;margin:0px 0px 0px 0px" data-aos="zoom-out">
+            <div style="margin:1% 0px 0px 50px;text-align:left;float:left;">
+                <div data-aos="zoom-out-right">總召　王鼎元　0800-000-000<br></div>
+                <div data-aos="zoom-out-left"> 副召　何昱辰　0800-000-000<br></div>
+                <div data-aos="zoom-out-right">　　　吳泓叡　0800-000-000<br></div>
+                <div data-aos="zoom-out-left">　　　陳禹媛　0800-000-000<br><br></div>
+                <a href="mailto:" style="color:white">
+                    <div data-aos="fade-down"><i class="fa fa-envelope" aria-hidden="true"></i>　　寄信給我們</div>
+                </a>
+                <a href="https://www.facebook.com/ntuimcamp2016/" style="color:white">
+                    <div data-aos="fade-up"><i class="fa fa-facebook-square" aria-hidden="true"></i>　　2017 國立台灣大學資訊管理營(Q&A詳見粉專!)</div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (如果有贊助廠商可以放這邊) -->
+    <footer style="background-color:#FFC8C8">
+        <div class="container text-center">
+            <p>Copyright &copy; 國立臺灣大學資訊管理營 2017 Designed by YuYuan</p>
+        </div>
+    </footer>
+</div>
+</body>
+<script src="./javascript/jquery.min.js"></script>
+<script src="./javascript/myjs.js"></script>
+<script src="./javascript/bootstrap.min.js"></script>
+<script src="./javascript/grayscale.min.js"></script>
+<script src='./javascript/jquery.easing.min.js'></script>
+<style>
+/*
+  div[class='container content-section text-center']{
+      background-image:url('6525.jpg');
+      background-size: 100% 100%;
+      background-color:transparent;
+  }
+  .myTitle{
+    background-image:url('splash.png');
+    background-size:90% 100%;
+    background-repeat:no-repeat;
+    background-position: center;
+  }
+*/
+</style>
+</html>
