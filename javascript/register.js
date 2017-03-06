@@ -6,15 +6,11 @@ $.validator.addMethod("usernameRegex", function(value, element) {
 var current_fs, next_fs, previous_fs; //fieldsets
 var left, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
-var form = $("#msform");
 var exclamation = "<i class='fa fa-exclamation-triangle warning' aria-hidden='true'></i><span class='warning' style='font-family:Microsoft JhengHei'>";
 
-var getReg = function(){
-  var reg = $('#msform').serializeObject();
-  console.table(reg.howToKnowUs);
-  return reg;
-};
+
 $(".next").click(function(){
+  var form = $("#msform");
   form.validate({
     rules: {
       check:{required:true}, //radio
@@ -57,8 +53,7 @@ $(".next").click(function(){
       error.appendTo( element.parents('.form-group') );
     }
   });
-  if (form.valid() === true){
-    // if(animating) return false;
+  if ($("#msform").valid() === true){
     animating = true;
 
     current_fs = $(this).parent();
@@ -96,41 +91,6 @@ $(".next").click(function(){
   }
 });
 
-// $('#previous').click(function(){
-//   if(animating) return false;
-//   animating = true;
-
-//   current_fs = $(this).parent();
-//   previous_fs = $(this).parent().prev();
-
-//   //de-activate current step on progressbar
-//   $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
-
-//   //show the previous fieldset
-//   previous_fs.show();
-//   //hide the current fieldset with style
-//   current_fs.animate({opacity: 0}, {
-//     step: function(now, mx) {
-//       //as the opacity of current_fs reduces to 0 - stored in "now"
-//       //1. scale previous_fs from 80% to 100%
-//       scale = 0.8 + (1 - now) * 0.2;
-//       //2. take current_fs to the right(50%) - from 0%
-//       left = ((1-now) * 50)+"%";
-//       //3. increase opacity of previous_fs to 1 as it moves in
-//       opacity = 1 - now;
-//       current_fs.css({'left': left});
-//       previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-//     },
-//     duration: 800,
-//     complete: function(){
-//       current_fs.hide();
-//       animating = false;
-//     },
-//     //this comes from the custom easing plugin
-//     easing: 'easeInOutBack'
-//   });
-// });
-
 // 用來修改預設的規則的錯誤文字;
 jQuery.extend(jQuery.validator.messages, {
   required: exclamation + "此欄位必填</span>",
@@ -150,34 +110,27 @@ jQuery.extend(jQuery.validator.messages, {
   // notEqualsto:"此處請勿留白"
 });
 
-
 $(".submit").click(function(){
 	//Submission starts from here.
-  if(form.valid() === false){
-    event.preventDefault();
-    return false;
-  }
+	var reg = $('#msform').serializeObject();
 	$.ajax({
 		type: 'POST',
-		url: './register',//到時候會變成正確的位置
-		data: JSON.stringify(getReg()),
+		url: 'http://localhost:3000/register',//到時候會變成正確的位置
+		data: JSON.stringify(reg),
+		success: function(data){
+			//完成之後的callback，data為上面的值
+		},
 		contentType: "application/json",
-		dataType: 'json',
-    success: function(data,Textmsg){
-      if(data.msg==="success"){
-        $("#regpopup").fadeIn();
-        $("#regpopup").addClass('activePopup');
-      }
-      else{
-        return alert(data.msg[0].toString());
-      };
-    }
+		dataType: 'json'
 	});
-
+  
+//按submit後popup，popup的動畫從activePopup的css設定 
+  // $("#regpopup").fadeIn();
+  // $("#regpopup").addClass('activePopup');
 	return false;
 })
 
 // 當點擊popup上的"OK!"按鈕，popup會關閉，並連結到首頁
 $(document).on('click', "#regpopBtn", function() {
-  location.href = "/";
+  location.href = "index.html";
 });
