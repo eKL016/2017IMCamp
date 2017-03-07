@@ -125,10 +125,10 @@ img{
 }
 .cell-2{
 	float:left;
+  position:relative;
 	width: 87vw;
   height:100vh;
 	padding-left:20px;
-  position:relative;
 }
 .logo{
 	border-radius:100%;
