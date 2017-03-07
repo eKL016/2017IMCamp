@@ -29,31 +29,31 @@ var now = 0;
 $('#photoCircle div').on('click', function(){
   $('#photoCircle div').css('background', 'none');
   $(this).css('background', 'white');
-  $("#review .cell-3 img").hide();
+  $(".reviewPhoto img").hide();
   var index = $(this).index() + 1;
   if(index === 1){
     now = 0;
-    $('#review .cell-3 img:first-child').show();
+    $('.reviewPhoto img:first-child').show();
   }
   else{
     now = index - 1;
-    $('#review .cell-3 img:nth-child(' + index + ')').show();
+    $('.reviewPhoto img:nth-child(' + index + ')').show();
   }
 });
 //每隔3秒，photo gallery就會自動輪播到下一張照片
 function photoSlide(){
-  var last = $("#review .cell-3 img").length - 1;
-  $("#review .cell-3 img").hide();
+  var last = $(".reviewPhoto img").length - 1;
+  $(".reviewPhoto img").hide();
   $("#photoCircle div").css('background', 'none');
   if(now === last){
     now = 0;
     $("#photoCircle div:first-child").css('background', 'white');
-    $("#review .cell-3 img:first-child").fadeIn(3000);
+    $(".reviewPhoto img:first-child").fadeIn(3000);
   }
   else{
     now = now + 1;
     $("#photoCircle div:nth-child(" + (now+1) + ")").css('background', 'white');
-    $("#review .cell-3 img:nth-child(" + (now+1) + ")").fadeIn(3000);
+    $(".reviewPhoto img:nth-child(" + (now+1) + ")").fadeIn(3000);
   }
   setTimeout(photoSlide, 3000);
 }
@@ -91,7 +91,7 @@ $(document).ready(function() {
     var bottom = top + height;
 
     var floor = Math.floor(top / height);
-    console.log(top + " " + bottom + " floor: " + floor);
+    // console.log(top + " " + bottom + " floor: " + floor);
     
     // 設定不同section的顏色
     if(floor === 0){

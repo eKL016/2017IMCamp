@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>WeeSports</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob: filesystem:">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.2/normalize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css">
+  <!-- my own css -->
+  <!-- <link rel="stylesheet" href="./css/style.css"> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    // $(document).on("mobileinit", function () {
+    //   $.mobile.autoInitializePage = false;
+    //   $.mobile.hashListeningEnabled = false;
+    // });
+
+    // function mobileInitPage() {
+    //   $.mobile.hashListeningEnabled = true;
+    //   $.mobile.initializePage();
+    // }
+  </script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <!-- GK Loader use RequireJS to load module -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.16/require.min.js"></script> -->
+  <!--Plug in GK-->
+  <!-- <script src="https://ezoui.com/components/jquery.gk/jquery.gk.min.js"></script> -->
+  <!-- Load GK components -->
+  <!-- <script components="https://ezoui.com/components/gk-ext/json-listview.html,https://ezoui.com/components/gk-jquerymobile/listview-li.html,https://ezoui.com/components/gk-ext/gk-text.html,https://ezoui.com/components/gk-ext/image.html" callback="mobileInitPage" src="https://ezoui.com/components/gk-loader/gk-loader.min.js"></script> -->
+</head>
+
+<body style="">
+  <!-- Page: home  -->
+  <div id="home" data-role="page">
+    <div data-role="header" data-position="fixed">
+      <div class="header-logo">WeeSports</div>
+      <div class="header-icon">
+        <i class="fa fa-info-circle" aria-hidden="true" onclick="javascript:location.href='#'"></i>
+      </div>
+    </div>
+
+    <div role="main" class="ui-content" style="padding:0px;height:100%">
+      <div class="ui-grid-a">
+        <div class="ui-block-a sports">
+          <img is="image" src="./photo/illustration1.png">
+        </div>
+        <!--  onclick="javascript:location.href='./sport.html'" -->
+        <div class="ui-block-b sports">
+          <img is="image" src="./photo/illustration1.png">
+        </div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a sports">
+          <img is="image" src="./photo/illustration1.png">
+        </div>
+        <div class="ui-block-b sports">
+          <img is="image" src="./photo/illustration1.png">
+        </div>
+      </div>
+      <div class="ui-grid-a">
+        <div class="ui-block-a sports">
+          <img is="image" src="./photo/illustration1.png" >
+        </div>
+        <div class="ui-block-b sports">
+          <img is="image" src="./photo/illustration1.png">
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <!-- <div data-position="fixed" data-role="footer">
+       clicking on the footer would go to a new page
+      <div class="footer-logo" onclick="javascript:location.href='./newgame.html'">CREATE NEW GAME!</div>
+    </div> -->
+  </div>
+
+</body>
+
+</html>
+<!-- <script src="./js/index.js"></script> -->

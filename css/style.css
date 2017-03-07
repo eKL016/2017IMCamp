@@ -6,7 +6,13 @@
           box-sizing: border-box;
   font-family:'Play', 'PT Sans Caption', Microsoft JhengHei;
 }
-
+@media (max-width: 768px) {
+  *{
+     -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  }
+}
 body,html{
 	height:100%;
 	width:100%;
@@ -22,9 +28,9 @@ img{
 	z-index:1000;
 	display:inline-block;
 	position:absolute;
-	top:37.5%;
-	left:37.5%;
-	font-size:72px;
+	top:37.5vh;
+	left:30vw;
+	font-size:4.5em;
 	font-family: Mistral;
 	letter-spacing: 16px;
 }
@@ -32,18 +38,18 @@ img{
 	z-index:1000;
 	/*display:inline-block;*/
 	position:absolute;
-	top:50%;
-	left:30%;
+	top:50vh;
+	left:22.5vw;
 	font-size:36px;
 	letter-spacing: 5px;
 }
 .homepage-circle{
-	width:250px;
-	height:250px;
+	width:20vw;
+	height:20vw;
 	border-radius:100%;
-	display:inline-block;
+	/*display:inline-block;*/
 	position:absolute;
-	font-size: 40px;
+	font-size: 3vw;
 	text-align:center;
 	line-height:250px;
 	cursor:pointer;
@@ -51,41 +57,32 @@ img{
 .homepage-circle:first-child{
 	color:rgb(129,173,49);
 	background:rgb(164,204,84);
-	top:25px;
-	left:27.5vw;
+	top:3vh;
+	left:22.5vw;
 }
 .homepage-circle:nth-child(2){
 	color:rgb(232,122,144);
 	background:rgb(251,168,142);
-	top:25px;
-	left:52.5vw;
+	top:3vh;
+	left:47.5vw;
 }
 .homepage-circle:nth-child(3){
 	color:rgb(30,136,168);
 	background:rgb(120,194,196);
-	bottom:25px;
-	left:27.5vw;
+	top:50vh;
+	left:22.5vw;
 }
 .homepage-circle:last-child{
 	color:rgb(214,153,32);
 	background:rgb(246,197,85);
-	bottom:25px;
-	left:52.5vw;
+	top:50vh;
+	left:47.5vw;
 }
 /*每一頁的固定設定*/
 .cell-1{
-	background: #F7F7F7;
 	float:left;
 	width: 7vw;
 	height: 100vh;
-}
-.cell-1 img{
-	width:80px;
-	height:80px;
-	border:none;
-	border-radius:100%;
-	margin-left:5px;
-	margin-top:20%;
 }
 .navbar-en{
 	color:#8C8C8C;
@@ -106,14 +103,31 @@ img{
 	writing-mode: vertical-rl;
 	-webkit-writing-mode: vertical-rl;
 }
+@media (max-width: 768px) {
+  nav,.cell-1{visibility:hidden}
+  .cell-2{position:static;}
+  .homepage-circle{
+    display: inline-block;
+    border-radius:0px;
+    position:static;
+  /*  top:0px;
+    left:0px;*/
+    width:45vw;
+    height:50vh;
+    line-height:auto;
+    margin:0px 1vw;
+    padding:0px;
+    border: none;
+  }
+  #slogan,#slogan2{
+    visibility:hidden;
+  }
+}
 .cell-2{
 	float:left;
-	width: 20vw;
+	width: 87vw;
 	padding-left:20px;
-}
-.illustration{
-	width:22vw;
-	height:250px;
+  position:relative;
 }
 .logo{
 	border-radius:100%;
@@ -122,11 +136,18 @@ img{
 	margin:25px 0px 40% 25px;
 }
 .title{
-	font-size:8vh;
-	letter-spacing:8px;
-	padding-right:10px;
-	margin-top: 2.5%;
-	margin-left:20px;
+	font-size:3.5em;
+	letter-spacing:3px;
+  position:absolute;
+  top:35px;
+  left:35px;
+}
+.illustration{
+  width:20vw;
+  height:250px;
+  position:absolute;
+  top:320px;
+  left:35px;
 }
 #footer-title{
 	font-size:6vh;
@@ -145,21 +166,22 @@ img{
 		font-size:6vw;
 	}
 }
-.cell-3{
+/*.cell-3{
 	float:left;
 	width: 70vw;
+  position: relative;
+}*/
+.reviewPhoto{
+  /*這裡的img是歷年回顧的影像*/
+  position:absolute;
+  top:100px;
+  right:15%;
+  width:50%;
+  height:100%;
 }
-.cell-3 img{
-	/*這裡的img是歷年回顧的影像*/
-	display:none;
-	margin:10% 0px 0px 15%;
-	width:70%;
-	height:100%;
-}
-.cell-3 img:first-child{display:block}
+.reviewPhoto img{display:none}
 #photoCircle{
-	margin-left:42.5%;
-	margin-top:20px;
+  margin:25px 0px 0px 30%;
 }
 #photoCircle div{
 	display:inline-block;
@@ -174,15 +196,18 @@ img{
 #photoCircle div:first-child{background:white;}
 /*時間表設定*/
 .myTable{
-	width:80%;
+  position:absolute;
+  top:10%;
+  left:30%;
+	width:60%;
 	color:white;
 	text-align:center;
-	font-size:24px;
+	font-size:1.5em;
 	line-height:50px;
 	background:#FEC3A8;
 	border:none;
 	border-collapse:collapse;
-	margin:10% 0px 0px 7%;
+	margin:10% 0px 0px 0%;
 }
 .days, .myLunch{background-color:#FF847C;}
 .days td,.day1,.day2,.day3{border:3px white solid;border-style:none solid solid none;}
@@ -191,6 +216,9 @@ img{
 .myTable tr:nth-child(6) td:nth-child(4), .myTable tr:nth-child(7) td:first-child{border-style:none none none none;}
 /*時間表設定結束*/
 #myBtnRegister, #myBtnCheck{
+  position:absolute;
+  top:450px;
+  right:40%;
   height:64px;
   width:200px;
   font-size:30px;
@@ -199,10 +227,10 @@ img{
   background:white;
   border:3px solid #1E6262;
   border-style:solid none solid none;
-  margin:5% 0px 0px 20%;
+  /*margin:40% 0px 0px 20%;*/
   cursor:pointer;
 }
-#myBtnCheck{margin:5% 0px 0px 2.5%;}
+#myBtnCheck{right:20%;}
 #myBtnRegister:hover, #myBtnCheck:hover{
 	animation: btn .5s;
 	animation-iteration-count: 1;
@@ -247,6 +275,27 @@ img{
   text-align:center;
   vertical-align: middle;
   line-height:5vh;
+}
+#checkSubmit{
+  background: #78C2C4;
+  color:white;
+  width:100px;
+  height:40px;
+  font-size:24px;
+  box-shadow: none !important;
+  padding:5px;
+  margin:10px 0px 10px 35%;
+  border:none !important;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  cursor:pointer;
+}
+#checkSubmit:hover{
+  background:  rgb(4,135,142);
+}
+#checkSubmit:focus{
+  background:  rgb(40,130,128);
 }
 /*左側的NAVBAR特效*/
 .ProgressBar-bar {
@@ -518,18 +567,6 @@ img{
 /*validation的設定*/
 .warning{
   color:red;
-}
-#checkSubmit{
-  width:100px;
-  height:40px;
-  font-size:24px;
-  box-shadow: none !important;
-  padding:5px;
-  margin:10px 0px 10px 35%;
-  border:none !important;
-  position:absolute;
-  bottom:0px;
-  left:0px;
 }
 #regpopup img{
   width: 20vh;
