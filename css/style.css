@@ -75,7 +75,7 @@ img{
 .homepage-circle:last-child{
 	color:rgb(214,153,32);
 	background:rgb(246,197,85);
-	top:3vh;
+	bottom:3vh;
 	left:47.5vw;
 }
 /*每一頁的固定設定*/
