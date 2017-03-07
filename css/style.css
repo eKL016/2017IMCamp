@@ -29,7 +29,7 @@ img{
 	display:inline-block;
 	position:absolute;
 	top:37.5vh;
-	left:30vw;
+	left:32vw;
 	font-size:4.5em;
 	font-family: Mistral;
 	letter-spacing: 16px;
@@ -126,6 +126,7 @@ img{
 .cell-2{
 	float:left;
 	width: 87vw;
+  height:100vh;
 	padding-left:20px;
   position:relative;
 }
@@ -146,7 +147,7 @@ img{
   width:20vw;
   height:250px;
   position:absolute;
-  top:320px;
+  bottom:5%;
   left:35px;
 }
 #footer-title{
@@ -174,7 +175,7 @@ img{
 .reviewPhoto{
   /*這裡的img是歷年回顧的影像*/
   position:absolute;
-  top:100px;
+  top:20%;
   right:15%;
   width:50%;
   height:100%;
@@ -197,7 +198,7 @@ img{
 /*時間表設定*/
 .myTable{
   position:absolute;
-  top:10%;
+  bottom:10%;
   left:30%;
 	width:60%;
 	color:white;
@@ -217,7 +218,7 @@ img{
 /*時間表設定結束*/
 #myBtnRegister, #myBtnCheck{
   position:absolute;
-  top:450px;
+  bottom:12.5%;
   right:40%;
   height:64px;
   width:200px;
