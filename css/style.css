@@ -347,26 +347,6 @@ img{
 .mobile-br{
   display:none;
 }
-@media all and (max-width: 768px) {
-    /*body{width:100%;}*/
-
-    #msform{width:100%;margin:0px;}
-    #msform fieldset {
-      width: 90% !important;
-      margin: 5px 5% 25px 5% !important;
-      padding: 5px 10px !important;
-    }
-    #progressbar li, #progressbar{font-size:10px;}
-    #msform{font-size:14px;}
-    .fs-title{font-size:14px;}
-    #msform input, #msform textarea{font-size:12px;}
-    .mobile-br{display:block;}
-    #msform .form-group input[type="radio"]{margin:1vw 1vw 1vw 0px!important;}
-    #msform .action-button {width: 25vw !important;}
-    #progressbar li:before{ margin:0px 0px 5px 0px !important; }
-    #progressbar li:after{left:-100% !important;}
-    #progressbar li span{margin-left:-70%;}
-}
 #msform .form-group{
   text-align:left;
 }
@@ -472,6 +452,7 @@ img{
  margin-top:2vh;
  margin-bottom:0px;
 }
+#register-heading img{width:30%;}
 /*headings*/
 .fs-title {
   font-size: 16px;
@@ -625,4 +606,25 @@ img{
   100%{
     transform:translate(20px);
   }
+}
+@media all and (max-width: 768px) {
+    /*body{width:100%;}*/
+
+    #msform{width:100%;margin:0px;}
+    #msform fieldset {
+      width: 90%;
+      margin: 5px 5% 25px 5%;
+      padding: 5px 10px;
+    }
+    #progressbar li, #progressbar{font-size:10px;}
+    #msform{font-size:14px;}
+    .fs-title{font-size:14px;}
+    #msform input, #msform textarea{font-size:12px;}
+    .mobile-br{display:block;}
+    #msform .form-group input[type="radio"]{margin:1vw 1vw 1vw 0px;}
+    #msform .action-button {width: 25vw;}
+    #progressbar li:before{ margin:0px 0px 5px 0px;}
+    #progressbar li:after{left:-100%;}
+    #progressbar li span{margin-left:-70%;}
+    #register-heading img{width:90%;}
 }
