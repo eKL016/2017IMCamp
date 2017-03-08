@@ -553,6 +553,11 @@ img{
 #regpopBtn:hover{
   box-shadow: 0 0 0 2px white, 0 0 0 3px #F27272;
 }
+#checkSize{
+  /*text-decoration:underline;*/
+  color:red;
+  cursor:pointer;
+}
 /*register.html的css樣式設定 結束*/
 
 /*loader樣式設定*/
@@ -563,7 +568,6 @@ img{
 }
 #loading{
   position: absolute;
-  /*background: black;*/
   left: 50%;
   top: 50%;
   z-index: 1;
@@ -576,9 +580,10 @@ img{
   height: 30px;
   display: inline-block;
   border-radius: 50%;
-  background: #00b3d5;
+  /*background: #00b3d5;*/
 }
 #loading i:first-child{
+  background:rgb(164,204,84);
   animation:loading-ani2 0.5s linear infinite;
   opacity: 0;
   transform:translate(-20px);
@@ -587,7 +592,10 @@ img{
 #loading i:nth-child(3){
   animation:loading-ani3 0.5s linear infinite;
 }
+#loading i:nth-child(2){background:rgb(251,168,142);}
+#loading i:nth-child(3){background:rgb(120,194,196)}
 #loading i:last-child{
+  background:rgb(246,197,85);
   animation:loading-ani1 0.5s linear infinite;
 }
 @keyframes loading-ani1{

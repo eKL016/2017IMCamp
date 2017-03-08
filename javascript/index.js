@@ -16,6 +16,7 @@ $("#mobile-check-btn").on('click', function(){
 // 按右上角的叉叉，popup關閉
 $('body').on('click','.closePopup', function() {
   $("#popupCheck").fadeOut();
+  $("#popupCheck #checkImg").empty();
 });
 // 按下方的"Check"，會回傳報名狀況
 $("#checkSubmit").on('click', function(){
@@ -23,9 +24,9 @@ $("#checkSubmit").on('click', function(){
   $("#checkSubmit").hide();
   $("#popupCheck #checkImg").fadeIn();
   // if(報名成功)
-    $("#popupCheck #checkImg").html("報名成功");
+    $("#popupCheck #checkImg").append("<img src='./photo/check.png' style='width:100%;'>");
   // else //尚未報名或失敗
-    // $("#popupCheck #checkImg").html("尚未報名");
+    // $("#popupCheck #checkImg").append("<img src='./photo/not.png' style='width:100%'>");
 });
 // 立即報名的按鈕 -> 報名頁面
 $("#myBtnRegister").on('click',function(){
@@ -58,12 +59,12 @@ function photoSlide(){
   if(now === last){
     now = 0;
     $("#photoCircle div:first-child").css('background', 'white');
-    $(".reviewPhoto img:first-child").fadeIn(3000);
+    $(".reviewPhoto img:first-child").fadeIn(500);
   }
   else{
     now = now + 1;
     $("#photoCircle div:nth-child(" + (now+1) + ")").css('background', 'white');
-    $(".reviewPhoto img:nth-child(" + (now+1) + ")").fadeIn(3000);
+    $(".reviewPhoto img:nth-child(" + (now+1) + ")").fadeIn(500);
   }
   setTimeout(photoSlide, 3000);
 }
@@ -183,9 +184,9 @@ $(document).ready(function() {
 var loading;
 function myLoading() {
     loading = setTimeout(showPage, 0);
-    // $("#loading").fadeOut(1000);
-    // $("#loaderBack").fadeOut();
-    // $("#myDiv").show();
+    $("#loading").fadeOut(1000);
+    $("#loaderBack").fadeOut();
+    $("#myDiv").css('visibility', 'visible');
 }
 
 function showPage() {

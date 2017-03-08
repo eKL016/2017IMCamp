@@ -33,7 +33,7 @@
 			<div class="set0-title">※活動日期：</div>　2017年7月3日(一)至7月6日(四)，共四天三夜。<br>
 			<div class="set0-title">※活動地點：</div>　國立臺灣大學校總區(台北市大安區羅斯福路四段一號)<br>
 			<div class="set0-title">※活動費用：</div>　新台幣5000元整。含保險、食宿、交通、教材⋯等等。團報另有優惠。<br>
-			<div class="set0-title">※繳費須知：</div>　本團隊將於2017年5月22日公布錄取名單，並寄發繳費通知至各學員所留之電子信箱。錄取學員繳費後，若放棄參加資格，可於時限內申請部分退費。退費規則將與繳費通知一併寄發，請同學特別注意!<br><br>
+			<div class="set0-title">※繳費須知：</div>　本團隊將於2017年5月15日公布錄取名單，並寄發繳費通知至各學員所留之電子信箱。錄取學員繳費後，若放棄參加資格，可於時限內申請部分退費。退費規則將與繳費通知一併寄發，請同學特別注意!<br><br>
 		</div>
 		<div class="form-group" style="text-align: center;margin-bottom:1vh">
 			<div class="col-sm-10">
@@ -129,13 +129,19 @@
 		</div>
 	</div>
 	<div class="form-group">
-	    <label class="control-label" for="size">營服尺寸:</label>
+	    <label class="control-label" for="size">營服尺寸: <span id="checkSize">查看尺寸表</span></label>
 		<div class="col-sm-10">
 			<input type="radio" name="size" value="S" >S
 			<input type="radio" name="size" value="M">M
 			<input type="radio" name="size" value="L">L
 			<input type="radio" name="size" value="XL">XL
 		</div>
+		<!-- 顯示尺寸表 -->
+		<div id="clothSize" style="color:#1E6262;font-size:20px;display:none;">
+            <span class="closePopup" style="color:#ccc"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
+            <img src="./photo/table.png" alt="">
+        </div>
+
 	</div>
     <input type="button" name="next" class="next action-button" value="Next" />
   </fieldset>
@@ -218,7 +224,7 @@
 	恭喜你完成報名!<br>
 	錄取名單將公佈於粉專，<br>
 	期待這個夏天與你相見!<br>
-	<div><img src="./photo/logo.png" alt="" /></div>
+	<img src="./photo/check.png" alt="" style="width:50%">
 	<div id="regpopBtn">OK!</div>
 </div>
 
