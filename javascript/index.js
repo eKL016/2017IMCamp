@@ -6,6 +6,13 @@ $("#myBtnCheck").on('click', function(){
   $("#checkSubmit").show();
   $("#popupCheck #checkImg").hide();
 });
+$("#mobile-check-btn").on('click', function(){
+  $("#popupCheck").addClass('activePopup');
+  $("#popupCheck").fadeIn();
+  $("#popupCheck div").show();
+  $("#checkSubmit").show();
+  $("#popupCheck #checkImg").hide();
+});
 // 按右上角的叉叉，popup關閉
 $('body').on('click','.closePopup', function() {
   $("#popupCheck").fadeOut();
@@ -23,6 +30,9 @@ $("#checkSubmit").on('click', function(){
 // 立即報名的按鈕 -> 報名頁面
 $("#myBtnRegister").on('click',function(){
   location.href = "register.html";
+});
+$("#mobile-register-btn").on("click",function(){
+  location.href = "register.html"
 });
 //歷年回顧 : photo gallery 
 var now = 0;

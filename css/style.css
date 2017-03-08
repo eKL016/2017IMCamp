@@ -6,13 +6,13 @@
           box-sizing: border-box;
   font-family:'Play', 'PT Sans Caption', Microsoft JhengHei;
 }
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
   *{
      -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
           box-sizing: content-box;
   }
-}
+}*/
 body,html{
 	height:100%;
 	width:100%;
@@ -103,26 +103,6 @@ img{
 	writing-mode: vertical-rl;
 	-webkit-writing-mode: vertical-rl;
 }
-@media (max-width: 768px) {
-  nav,.cell-1{visibility:hidden}
-  .cell-2{position:static;}
-  .homepage-circle{
-    display: inline-block;
-    border-radius:0px;
-    position:static;
-  /*  top:0px;
-    left:0px;*/
-    width:45vw;
-    height:50vh;
-    line-height:auto;
-    margin:0px 1vw;
-    padding:0px;
-    border: none;
-  }
-  #slogan,#slogan2{
-    visibility:hidden;
-  }
-}
 .cell-2{
 	float:left;
   position:relative;
@@ -159,19 +139,6 @@ img{
 	padding-top:20px;
 	padding-bottom:30px;
 }
-@media (max-width: 768px) {
-	.title{
-		font-size:8vw;
-	}
-	#footer-title{
-		font-size:6vw;
-	}
-}
-/*.cell-3{
-	float:left;
-	width: 70vw;
-  position: relative;
-}*/
 .reviewPhoto{
   /*這裡的img是歷年回顧的影像*/
   position:absolute;
@@ -380,14 +347,16 @@ img{
   display:none;
 }
 @media all and (max-width: 768px) {
-    #msform{width:100%;}
+    /*body{width:100%;}*/
+
+    #msform{width:90%;margin:0px;}
     #msform fieldset{
       width: 100%;
       margin: 5px 5% 25px 5%;
       padding: 5px 10px;
     }
     #progressbar li, #progressbar{font-size:10px;}
-    #msform{font-size:12px;}
+    #msform{font-size:14px;}
     .fs-title{font-size:14px;}
     #msform input, #msform textarea{font-size:12px;}
     .mobile-br{display:block;}
