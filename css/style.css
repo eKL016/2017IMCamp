@@ -32,7 +32,6 @@ img{
 	width:20vw;
 	height:20vw;
 	border-radius:100%;
-	/*display:inline-block;*/
 	position:absolute;
 	font-size: 3vw;
 	text-align:center;
@@ -307,21 +306,6 @@ img{
 .ProgressBar-circle--active {
   border: solid 15px #B6B2B2;
 }
-
-/*.ProgressBar-caption{
-  visibility:hidden;
-  color: black;
-  font-size: 16px;
-  text-decoration: none;
-  margin-top: -8px;
-  position: absolute;
-  right: 20px;
-  text-align: right;
-  top: -40%;
-  width: 200px;
-  writing-mode:vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-}*/
 
 /*register.html的css樣式設定*/
 #clothSize{

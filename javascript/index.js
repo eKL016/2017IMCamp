@@ -101,7 +101,6 @@ $(document).ready(function() {
     var bottom = top + height;
 
     var floor = Math.floor(top / height);
-    // console.log(top + " " + bottom + " floor: " + floor);
     
     // 設定不同section的顏色
     if(floor === 0){

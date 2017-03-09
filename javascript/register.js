@@ -13,30 +13,30 @@ $(".next").click(function(){
   var form = $("#msform");
   form.validate({
     rules: {
-      // check:{required:true}, //radio
-      // username:{required:true},
-      // gender:{required:true}, //radio
-      // birthday:{required:true,date:true,dateISO:true},
-      // password:{required:true},
-      // bloodType:{required:true}, //radio
-      // school:{required:true},
-      // grade:{required:true}, //radio
-      // type:{required:true}, //radio
-      // vegan:{required:true}, //radio
-      // mSpecial:{required:true}, //radio
-      // mSpecialText:{required:'#mSpecial-yes:checked'},
-      // sSpecial:{required:true}, //radio
-      // sSpecialText:{required:'#sSpecial-yes:checked'},
-      // size:{required:true}, //radio
-      // tel:{required:true,digits:true},
-      // facebook:{required:true},
-      // email:{required:true,email:true},
-      // emergencyContact:{required:true},
-      // emergencyRel:{required:true},
-      // emergencyTel:{required:true,digits:true},
-      // selfIntro:{required:true,maxlength:180},
-      // mot:{required:true,maxlength:180},
-      // demand:{required:true,maxlength:180},
+      check:{required:true}, //radio
+      username:{required:true},
+      gender:{required:true}, //radio
+      birthday:{required:true,date:true,dateISO:true},
+      password:{required:true},
+      bloodType:{required:true}, //radio
+      school:{required:true},
+      grade:{required:true}, //radio
+      type:{required:true}, //radio
+      vegan:{required:true}, //radio
+      mSpecial:{required:true}, //radio
+      mSpecialText:{required:'#mSpecial-yes:checked'},
+      sSpecial:{required:true}, //radio
+      sSpecialText:{required:'#sSpecial-yes:checked'},
+      size:{required:true}, //radio
+      tel:{required:true,digits:true},
+      facebook:{required:true},
+      email:{required:true,email:true},
+      emergencyContact:{required:true},
+      emergencyRel:{required:true},
+      emergencyTel:{required:true,digits:true},
+      selfIntro:{required:true,maxlength:180},
+      mot:{required:true,maxlength:180},
+      demand:{required:true,maxlength:180},
     },
     messages: {
       mSpecialText:{
