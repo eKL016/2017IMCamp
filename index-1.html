@@ -19,6 +19,10 @@
     font-family:'Play', 'PT Sans Caption', Microsoft JhengHei;
     text-decoration: none !important;
   }
+  a{
+    text-decoration:none;
+    color:inherit;
+  }
   .ui-grid-a{
      font-size:2em;
      text-align:center;
@@ -31,7 +35,7 @@
     height:43.5vw !important;
   }
   .section{
-    height:80vh;
+    height:100vh;
     padding:20px;
   }
   .reviewPhoto{
@@ -44,7 +48,7 @@
   }
   .mobile-title{
     font-size:2em;
-    padding-bottom:20px;
+    padding-bottom:7.5vh;
   }
   button{
     color:#1E6262;
@@ -94,7 +98,7 @@
     <!-- 營隊介紹 -->
     <div id="mobile-campInfo" class="section" style="background:url('./photo/background1.png');background-repeat: no-repeat;background-size: 100% 100%">
       <div class="mobile-title" style="color:#81AD31;">營隊介紹</div>
-      <div style="font-size:2.5vh;color:#536F20;">
+      <div style="font-size:2.5vh;color:#536F20;line-height:4vh">
         <b>資訊管理</b>是一門跨領域的學問，
         <b>臺大資訊管理學系</b>結合<b>資訊科技基礎</b>與<b>專業管理素養</b>，
         培養無數綜覽全局視野的青年才俊，
@@ -113,13 +117,13 @@
     <!-- 活動簡介 -->
     <div id="mobile-dailyInfo" class="section" style="background:url('./photo/background2.png');background-repeat: no-repeat;background-size: 100% 100%">
       <div class="mobile-title" style="color:#E87A90;">活動簡介</div>
-      <img src="./photo/table.png" alt="" style="width:100%;height:80%">
+      <img src="./photo/table.png" alt="" style="width:100%;margin-top:10%">
     </div>
 
     <!-- 報名資訊 -->
     <div id="mobile-register" class="section" style="background:url('./photo/background3.png');background-repeat: no-repeat;background-size: 100% 100%">
       <div class="mobile-title" style="color:#1E88A8;">報名資訊</div>
-      <div style="font-size:4.2vw;line-height:5vh;color:#04878E;">
+      <div style="font-size:4.2vw;line-height:7vh;color:#04878E;">
         <div data-aos="fade-up">招生對象：共 100 名全台各地高中職學生</div>
         <div data-aos="fade-down">報名時間：即日起至2017/5/5(五)</div>
         <div data-aos="fade-up">報名方式：線上報名</div>
@@ -128,9 +132,9 @@
         <div data-aos="fade-down">活動地點：國立臺灣大學校總區</div>
         <div data-aos="fade-up">主辦單位：國立臺灣大學資訊管理學系學生會</div>
       </div>
-      <button id="mobile-register-btn">立刻報名!</button>
+      <button id="mobile-register-btn">立即報名!</button>
       <button id="mobile-check-btn">確認報名</button>
-      <div id="popupCheck" style="color:#1E6262;font-size:20px;display:none">
+      <div id="popupCheck" style="color:#1E6262;font-size:14px;display:none;height:80vw !important">
         <span class="closePopup" style="color:#ccc"><i class="fa fa-times-circle" aria-hidden="true"></i></span>
         <div class="form-group" style="margin:10% 5px">
             <div>姓名<br><input type="text" name="checkname" placeholder="請輸入姓名"></div>
@@ -138,7 +142,7 @@
         <div class="form-group" style="margin:10% 5px">       
             <div>身分證字號<br><input type="text" name="checkpassword" placeholder="請輸入身分證字號"></div>
         </div>
-        <div id="checkImg" style='color:black'></div>
+        <div id="checkImg" style='color:black;'></div>
         <input type="submit" name="submit" value="Check" id="checkSubmit"/>
       </div>
     </div>
@@ -153,9 +157,13 @@
         <img src="./photo/day4-1.jpg" alt="活動照片" style="margin:auto">
         <img src="./photo/day4-2.jpg" alt="活動照片" style="margin:auto">
       </div>
-      <div style="text-align:center; font-size:3vh;margin-top:20%;color:white">
-        <div><i class="fa fa-facebook-official" aria-hidden="true"></i> 2017台大資管營</div>
-        <div>總召　王鼎元　0912-845-656<br></div>
+      <div style="text-align:center; font-size:3vh;margin-top:25%;color:white">
+        <a href="https://www.facebook.com/ntuimcamp2017/?fref=ts">
+          <div><i class="fa fa-facebook-official" aria-hidden="true"></i> 2017台大資管營</div></a>
+        <a href="mailto:camp2017@ntu.im">
+          <div><i class="fa fa-envelope" aria-hidden="true"></i> camp2017@ntu.im</div>
+        </a>
+        <div><br>總召　王鼎元　0912-845-656<br></div>
         <div>副召　陳禹媛　0988-820-629<br></div>
         <div>　　　吳泓叡　0978-212-021<br></div>
         <div>　　　何昱辰　0987-400-736<br></div>

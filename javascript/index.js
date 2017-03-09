@@ -24,9 +24,9 @@ $("#checkSubmit").on('click', function(){
   $("#checkSubmit").hide();
   $("#popupCheck #checkImg").fadeIn();
   // if(報名成功)
-    $("#popupCheck #checkImg").append("<img src='./photo/check.png' style='width:100%;'>");
+    $("#popupCheck #checkImg").append("<img src='./photo/check.png' style='width:80%;margin:auto;'><div>恭喜完成報名!<br>錄取名單將於5/15公布於粉專</div>");
   // else //尚未報名或失敗
-    // $("#popupCheck #checkImg").append("<img src='./photo/not.png' style='width:100%'>");
+    // $("#popupCheck #checkImg").append("<img src='./photo/not.png' style='width:80%;margin:auto;'><div>尚未報名<br>若有問題請洽FB粉專</div>");
 });
 // 立即報名的按鈕 -> 報名頁面
 $("#myBtnRegister").on('click',function(){
