@@ -12,17 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css">
 </head>
+<script>
+if(/Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+    location.href = "./index-1.html";// iPad|
+</script>
 
 <body id="page-top" data-spy="scroll" style="overflow-x:hidden;" onload="myLoading()">
-<script>
-if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    location.href = "./index-1.html";
-    // iPad|
-}
-if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)){
-  // alert("Please dont use IE.");
-}
-</script>
+
 <!-- loading的動畫 -->
 <div id="loaderBack"><div id="loading"><i></i><i></i><i></i><i></i></div></div>
 
@@ -37,15 +33,8 @@ if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgen
     <div id="homepage" class="js-content" style="height:100%;width:100%;">
         <div class="cell-1"></div>
         <div class="cell-2" style="color:#656765;">
-            <!-- <div id="slogan">IMFINITY</div>
-            <div id="slogan2">2017 國立臺灣大學資訊管理營</div> -->
             <div style="z-index:1000;position:absolute;top:32.5%;left:27.5%"><img src="./photo/title.png" style="width:40vw"></div>
-
             <div style="position:relative;height:100vh;width:100vw">
- <!--                <div class="homepage-circle" data-scroll="campInfo">營隊介紹</div>
-                <div class="homepage-circle" data-scroll="dailyInfo">活動簡介</div>
-                <div class="homepage-circle" data-scroll="register">報名資訊</div>
-                <div class="homepage-circle" data-scroll="review">精彩回顧</div> -->
                 <div class="homepage-circle" data-scroll="campInfo"><img src="./photo/camp.png" alt=""></div>
                 <div class="homepage-circle" data-scroll="dailyInfo"><img src="./photo/daily.png" alt=""></div>
                 <div class="homepage-circle" data-scroll="register"><img src="./photo/register.png" alt=""></div>
@@ -206,4 +195,20 @@ if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgen
 AOS.init({
     duration: 1200,
 });
+function GetIEVersion() {
+  var sAgent = window.navigator.userAgent;
+  var Idx = sAgent.indexOf("MSIE");
+  // If IE, return version number.
+  if (Idx > 0) 
+    return parseInt(sAgent.substring(Idx+ 5, sAgent.indexOf(".", Idx)));
+  // If IE 11 then look for Updated user agent string.
+  else if (!!navigator.userAgent.match(/Trident\/7\./)) 
+    return 11;
+  else
+    return 0; //It is not IE
+}
+if (GetIEVersion() > 0){
+   $(".navbar-en").html("台<br>大<br>資<br>管<br>營");
+}
+
 </script>

@@ -89,7 +89,6 @@ $(document).ready(function() {
   
   $(".js-content").each(function(i){
     html  = '<div class="ProgressBar-bar js-ProgressBar-bar" style="margin:auto" >';
-    html += '<a href="#" data-scroll="' + $(this).attr('id') + '" class="ProgressBar-caption js-ProgressBar-caption">' + label[i] + '</a>';
     html += '<span class="ProgressBar-avancement js-ProgressBar-avancement"></span>';
     html += '<a href="#" data-scroll="' +  $(this).attr('id') + '"<span class="ProgressBar-circle js-ProgressBar-circle"></span></a>';
     html += '</div>';
@@ -157,7 +156,7 @@ $(document).ready(function() {
 
       if (top >= this_top && top <= this_bottom){ //如果現在滾動到一個js-content的中間
         percent = ((top - this_top) / height) * 100;
-        percent += 10;
+        // percent += 10;
       }else if (top > this_bottom) { //如果現在不在這個js-content中，即在後面的js-content中
         percent = 100;
       }
@@ -184,18 +183,12 @@ $(document).ready(function() {
 var loading;
 function myLoading() {
     loading = setTimeout(showPage, 0);
-    // $("#loading").fadeOut(1000);
-    // $("#loaderBack").fadeOut();
-    // $("#myDiv").css('visibility', 'visible');
 }
 
 function showPage() {
   $("#loading").css('display', 'none');
   $("#loaderBack").css('display', 'none');
   $("#myDiv").css('display', 'block');
-  // document.getElementById("loading").style.display = "none";
-  // document.getElementById("loaderBack").style.display = "none";
-  // document.getElementById("myDiv").style.display = "block";
   AOS.init({
     duration: 1200,
   });

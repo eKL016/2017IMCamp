@@ -28,25 +28,6 @@ img{
 .homepage{
 	position:relative;
 }
-#slogan{
-	z-index:1000;
-	display:inline-block;
-	position:absolute;
-	top:37.5vh;
-	left:32vw;
-	font-size:4.5em;
-	font-family: Mistral;
-	letter-spacing: 16px;
-}
-#slogan2{
-	z-index:1000;
-	/*display:inline-block;*/
-	position:absolute;
-	top:50vh;
-	left:22.5vw;
-	font-size:36px;
-	letter-spacing: 5px;
-}
 .homepage-circle{
 	width:20vw;
 	height:20vw;
@@ -327,7 +308,7 @@ img{
   border: solid 15px #B6B2B2;
 }
 
-.ProgressBar-caption{
+/*.ProgressBar-caption{
   visibility:hidden;
   color: black;
   font-size: 16px;
@@ -340,7 +321,7 @@ img{
   width: 200px;
   writing-mode:vertical-rl;
   -webkit-writing-mode: vertical-rl;
-}
+}*/
 
 /*register.html的css樣式設定*/
 #clothSize{
