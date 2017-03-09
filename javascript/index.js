@@ -184,15 +184,18 @@ $(document).ready(function() {
 var loading;
 function myLoading() {
     loading = setTimeout(showPage, 0);
-    $("#loading").fadeOut(1000);
-    $("#loaderBack").fadeOut();
-    $("#myDiv").css('visibility', 'visible');
+    // $("#loading").fadeOut(1000);
+    // $("#loaderBack").fadeOut();
+    // $("#myDiv").css('visibility', 'visible');
 }
 
 function showPage() {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("loaderBack").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
+  $("#loading").css('display', 'none');
+  $("#loaderBack").css('display', 'none');
+  $("#myDiv").css('display', 'block');
+  // document.getElementById("loading").style.display = "none";
+  // document.getElementById("loaderBack").style.display = "none";
+  // document.getElementById("myDiv").style.display = "block";
   AOS.init({
     duration: 1200,
   });
