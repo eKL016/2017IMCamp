@@ -366,7 +366,7 @@ img{
   #clothSize{
     width: 80vw !important;
     height: 65vh !important;
-    overflow:visible;
+    overflow:scroll;
   }
 }
 #msform {

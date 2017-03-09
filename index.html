@@ -15,8 +15,12 @@
 
 <body id="page-top" data-spy="scroll" style="overflow-x:hidden;" onload="myLoading()">
 <script>
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     location.href = "./index-1.html";
+    // iPad|
+}
+if (navigator.appName == 'Microsoft Internet Explorer' ||  !!(navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/rv:11/)) || (typeof $.browser !== "undefined" && $.browser.msie == 1)){
+  // alert("Please dont use IE.");
 }
 </script>
 <!-- loading的動畫 -->
