@@ -169,17 +169,18 @@ img{
 /*時間表設定*/
 .myTable{
   position:absolute;
-  bottom:10%;
+  bottom:10vh;
   left:30%;
 	width:60%;
 	color:white;
 	text-align:center;
 	font-size:1.5em;
-	line-height:50px;
+	line-height:10vh;
 	background:#FEC3A8;
 	border:none;
 	border-collapse:collapse;
 	margin:10% 0px 0px 0%;
+  cursor:pointer;
 }
 .days, .myLunch{background-color:#FF847C;}
 .days td,.day1,.day2,.day3{border:3px white solid;border-style:none solid solid none;}
