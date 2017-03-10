@@ -6,10 +6,20 @@
           box-sizing: border-box;
   font-family:'Play', 'PT Sans Caption', Microsoft JhengHei;
 }
-
+/*@media (max-width: 768px) {
+  *{
+     -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+  }
+}*/
+a{
+  text-decoration: none;
+  color:inherit;
+}
 body,html{
 	height:100%;
-	width:100%;
+	/*width:100%;*/
 }
 img{
 	width: 100%;
@@ -18,32 +28,12 @@ img{
 .homepage{
 	position:relative;
 }
-#slogan{
-	z-index:1000;
-	display:inline-block;
-	position:absolute;
-	top:37.5%;
-	left:37.5%;
-	font-size:72px;
-	font-family: Mistral;
-	letter-spacing: 16px;
-}
-#slogan2{
-	z-index:1000;
-	/*display:inline-block;*/
-	position:absolute;
-	top:50%;
-	left:30%;
-	font-size:36px;
-	letter-spacing: 5px;
-}
 .homepage-circle{
-	width:250px;
-	height:250px;
+	width:20vw;
+	height:20vw;
 	border-radius:100%;
-	display:inline-block;
 	position:absolute;
-	font-size: 40px;
+	font-size: 3vw;
 	text-align:center;
 	line-height:250px;
 	cursor:pointer;
@@ -51,41 +41,32 @@ img{
 .homepage-circle:first-child{
 	color:rgb(129,173,49);
 	background:rgb(164,204,84);
-	top:25px;
-	left:27.5vw;
+	top:3vh;
+	left:17.5vw;
 }
 .homepage-circle:nth-child(2){
 	color:rgb(232,122,144);
 	background:rgb(251,168,142);
-	top:25px;
-	left:52.5vw;
+	top:3vh;
+	right:32.5vw;
 }
 .homepage-circle:nth-child(3){
 	color:rgb(30,136,168);
 	background:rgb(120,194,196);
-	bottom:25px;
-	left:27.5vw;
+	bottom:3vh;
+	left:17.5vw;
 }
 .homepage-circle:last-child{
 	color:rgb(214,153,32);
 	background:rgb(246,197,85);
-	bottom:25px;
-	left:52.5vw;
+	bottom:3vh;
+	right:32.5vw;
 }
 /*每一頁的固定設定*/
 .cell-1{
-	background: #F7F7F7;
 	float:left;
 	width: 7vw;
 	height: 100vh;
-}
-.cell-1 img{
-	width:80px;
-	height:80px;
-	border:none;
-	border-radius:100%;
-	margin-left:5px;
-	margin-top:20%;
 }
 .navbar-en{
 	color:#8C8C8C;
@@ -108,12 +89,10 @@ img{
 }
 .cell-2{
 	float:left;
-	width: 20vw;
+  position:relative;
+	width: 87vw;
+  height:100vh;
 	padding-left:20px;
-}
-.illustration{
-	width:22vw;
-	height:250px;
 }
 .logo{
 	border-radius:100%;
@@ -122,11 +101,18 @@ img{
 	margin:25px 0px 40% 25px;
 }
 .title{
-	font-size:8vh;
-	letter-spacing:8px;
-	padding-right:10px;
-	margin-top: 2.5%;
-	margin-left:20px;
+	font-size:3.5em;
+	letter-spacing:3px;
+  position:absolute;
+  top:35px;
+  left:35px;
+}
+.illustration{
+  width:20vw;
+  height:250px;
+  position:absolute;
+  bottom:5%;
+  left:35px;
 }
 #footer-title{
 	font-size:6vh;
@@ -134,32 +120,21 @@ img{
 	text-align: center;
 	color:white;
 	margin:auto;
+  padding-left:10vw;
 	padding-top:20px;
 	padding-bottom:30px;
 }
-@media (max-width: 768px) {
-	.title{
-		font-size:8vw;
-	}
-	#footer-title{
-		font-size:6vw;
-	}
+.reviewPhoto{
+  /*這裡的img是歷年回顧的影像*/
+  position:absolute;
+  top:20%;
+  right:15%;
+  width:50%;
+  height:100%;
 }
-.cell-3{
-	float:left;
-	width: 70vw;
-}
-.cell-3 img{
-	/*這裡的img是歷年回顧的影像*/
-	display:none;
-	margin:10% 0px 0px 15%;
-	width:70%;
-	height:100%;
-}
-.cell-3 img:first-child{display:block}
+.reviewPhoto img{display:none}
 #photoCircle{
-	margin-left:42.5%;
-	margin-top:20px;
+  margin:25px 0px 0px 30%;
 }
 #photoCircle div{
 	display:inline-block;
@@ -174,15 +149,19 @@ img{
 #photoCircle div:first-child{background:white;}
 /*時間表設定*/
 .myTable{
-	width:80%;
+  position:absolute;
+  bottom:10vh;
+  left:30%;
+	width:60%;
 	color:white;
 	text-align:center;
-	font-size:24px;
-	line-height:50px;
+	font-size:1.5em;
+	line-height:10vh;
 	background:#FEC3A8;
 	border:none;
 	border-collapse:collapse;
-	margin:10% 0px 0px 7%;
+	margin:10% 0px 0px 0%;
+  cursor:pointer;
 }
 .days, .myLunch{background-color:#FF847C;}
 .days td,.day1,.day2,.day3{border:3px white solid;border-style:none solid solid none;}
@@ -191,6 +170,9 @@ img{
 .myTable tr:nth-child(6) td:nth-child(4), .myTable tr:nth-child(7) td:first-child{border-style:none none none none;}
 /*時間表設定結束*/
 #myBtnRegister, #myBtnCheck{
+  position:absolute;
+  bottom:12.5%;
+  right:40%;
   height:64px;
   width:200px;
   font-size:30px;
@@ -199,10 +181,10 @@ img{
   background:white;
   border:3px solid #1E6262;
   border-style:solid none solid none;
-  margin:5% 0px 0px 20%;
+  /*margin:40% 0px 0px 20%;*/
   cursor:pointer;
 }
-#myBtnCheck{margin:5% 0px 0px 2.5%;}
+#myBtnCheck{right:20%;}
 #myBtnRegister:hover, #myBtnCheck:hover{
 	animation: btn .5s;
 	animation-iteration-count: 1;
@@ -237,8 +219,8 @@ img{
   right: 0;
   bottom: 0;
   z-index: 9999;
-  width: 50vh !important;
-  height: 50vh !important;
+  width: 50vh;
+  height: 50vh;
   margin: auto;
   padding:2vh;
   overflow: visible;
@@ -247,6 +229,27 @@ img{
   text-align:center;
   vertical-align: middle;
   line-height:5vh;
+}
+#checkSubmit{
+  background: #78C2C4;
+  color:white;
+  width:100px;
+  height:40px;
+  font-size:24px;
+  box-shadow: none !important;
+  padding:5px;
+  margin:10px 0px 10px 35%;
+  border:none !important;
+  position:absolute;
+  bottom:0px;
+  left:0px;
+  cursor:pointer;
+}
+#checkSubmit:hover{
+  background:  rgb(4,135,142);
+}
+#checkSubmit:focus{
+  background:  rgb(40,130,128);
 }
 /*左側的NAVBAR特效*/
 .ProgressBar-bar {
@@ -304,45 +307,42 @@ img{
   border: solid 15px #B6B2B2;
 }
 
-.ProgressBar-caption{
-  visibility:hidden;
-  color: black;
-  font-size: 16px;
-  text-decoration: none;
-  margin-top: -8px;
-  position: absolute;
-  right: 20px;
-  text-align: right;
-  top: -40%;
-  width: 200px;
-  writing-mode:vertical-rl;
-  -webkit-writing-mode: vertical-rl;
-}
-
 /*register.html的css樣式設定*/
+#clothSize{
+  /*衣服尺寸表的panel需放大*/
+  position: fixed;
+  top: -10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  width: 50vw !important;
+  height: 50vh !important;
+  margin: auto;
+  padding:2vh;
+  overflow: scroll;
+  background: white;
+  box-shadow:2px 2px 2px 2px rgba(20%,20%,40%,0.5);
+  text-align:center;
+  vertical-align: middle;
+  line-height:5vh;
+}
+@media all and (max-width: 768px) {
+  #clothSize{
+    width: 80vw !important;
+    height: 65vh !important;
+    overflow:scroll;
+  }
+}
 #msform {
   width: 60%;
   margin: 25px auto;
   text-align: center;
   position: relative;
+  font-family:Microsoft JhengHei;
 }
 .mobile-br{
   display:none;
-}
-@media all and (max-width: 768px) {
-    #msform{width:100%;}
-    #msform fieldset{
-      width: 100%;
-      margin: 5px 5% 25px 5%;
-      padding: 5px 10px;
-    }
-    #progressbar li, #progressbar{font-size:10px;}
-    #msform{font-size:12px;}
-    .fs-title{font-size:14px;}
-    #msform input, #msform textarea{font-size:12px;}
-    .mobile-br{display:block;}
-    #msform .form-group input[type="radio"]{margin:1vw 1vw 1vw 0px!important;}
-    #msform .action-button {width: 25vw !important;}
 }
 #msform .form-group{
   text-align:left;
@@ -371,7 +371,8 @@ img{
   padding: 10px;
   border: none;
   box-sizing: border-box;
-  background:#E4F9F5;
+  /*background:#E4F9F5;*/
+  background: #D2EDF0;
   font-size: 14px;
 }
 #msform input[type="text"], #msform textarea{
@@ -395,6 +396,7 @@ img{
 }
 #msform input[type="radio"]:checked {
   background-color: #47d1da;
+  /*background: #E4F9F5;*/
   box-shadow: inset 0 0 0 .1875em white;
   -webkit-transition: background .15s, box-shadow .5s;
   transition: background .15s, box-shadow .5s;
@@ -423,7 +425,7 @@ img{
 /*buttons*/
 #msform .action-button {
   width: 10vw;
-  background: #F38181;
+  background: #F27272;
   font-weight: bold;
   color: white;
   border: 0 none;
@@ -433,7 +435,7 @@ img{
   margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #F27272;
 }
 .submit{
   background:#48C9B0 !important;
@@ -447,11 +449,12 @@ img{
  margin-top:2vh;
  margin-bottom:0px;
 }
+#register-heading img{width:30%;}
 /*headings*/
 .fs-title {
   font-size: 16px;
   text-transform: uppercase;
-  color: #2C3E50;
+  color: #767676;
   margin-bottom: 10px;
 }
 /*progressbar*/
@@ -477,8 +480,8 @@ img{
   line-height: 20px;
   display: block;
   font-size: 10px;
-  color: #625772;
-  background: #A9EEE6;
+  color: white;
+  background: #78C2C4;
   border-radius: 3px;
   margin: 0 auto 5px auto;
 }
@@ -487,7 +490,7 @@ img{
   content: '';
   width: 100%;
   height: 2px;
-  background: #A9EEE6;
+  background: #78C2C4;
   position: absolute;
   left: -50%;
   top: 9px;
@@ -500,12 +503,12 @@ img{
 /*marking active/completed steps green*/
 /*The number of the step and the connector before it = green*/
 #progressbar li.active:before,  #progressbar li.active:after{
-  background: #F38181;
-  color:#625772;
+  background: #F27272;
+  color:white;
 }
-
+/*#set0{color:#767676;}*/
 #set0-content{
-  background-color:#E4F9F5;
+  background-color:#D2EDF0;
   margin:1vh 0px 2vh 0px;
   padding:0.1vh 0px 0px 0px;
   text-align:left;
@@ -518,18 +521,6 @@ img{
 /*validation的設定*/
 .warning{
   color:red;
-}
-#checkSubmit{
-  width:100px;
-  height:40px;
-  font-size:24px;
-  box-shadow: none !important;
-  padding:5px;
-  margin:10px 0px 10px 35%;
-  border:none !important;
-  position:absolute;
-  bottom:0px;
-  left:0px;
 }
 #regpopup img{
   width: 20vh;
@@ -552,12 +543,17 @@ img{
   position:absolute;
   bottom:0px;
   right:0px;
-  background: #F38181;
+  background: #F27272;
   color:white;
   cursor:pointer;
 }
 #regpopBtn:hover{
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #F38181;
+  box-shadow: 0 0 0 2px white, 0 0 0 3px #F27272;
+}
+#checkSize{
+  /*text-decoration:underline;*/
+  color:red;
+  cursor:pointer;
 }
 /*register.html的css樣式設定 結束*/
 
@@ -565,26 +561,26 @@ img{
 #loaderBack{
   width: 100%;
   height: 100%;
-  background:#ccc;
+  background:#E3E3E3;
 }
 #loading{
   position: absolute;
-  /*background: black;*/
   left: 50%;
   top: 50%;
   z-index: 1;
   width: 150px;
   height: 150px;
-  margin: -75px 0 0 -75px;
+  margin: 0px 0 0 -75px;
 }
 #loading i{
   width: 30px;
   height: 30px;
   display: inline-block;
   border-radius: 50%;
-  background: #00b3d5;
+  /*background: #00b3d5;*/
 }
 #loading i:first-child{
+  background:rgb(164,204,84);
   animation:loading-ani2 0.5s linear infinite;
   opacity: 0;
   transform:translate(-20px);
@@ -593,7 +589,10 @@ img{
 #loading i:nth-child(3){
   animation:loading-ani3 0.5s linear infinite;
 }
+#loading i:nth-child(2){background:rgb(251,168,142);}
+#loading i:nth-child(3){background:rgb(120,194,196)}
 #loading i:last-child{
+  background:rgb(246,197,85);
   animation:loading-ani1 0.5s linear infinite;
 }
 @keyframes loading-ani1{
@@ -612,4 +611,24 @@ img{
   100%{
     transform:translate(20px);
   }
+}
+@media all and (max-width: 768px) {
+    /*body{width:100%;}*/
+    #msform{width:100%;margin:0px;}
+    #msform fieldset {
+      width: 90%;
+      margin: 5px 5% 25px 5%;
+      padding: 5px 10px;
+    }
+    #progressbar li, #progressbar{font-size:10px;}
+    #msform{font-size:14px;}
+    .fs-title{font-size:14px;}
+    #msform input, #msform textarea{font-size:12px;}
+    .mobile-br{display:block;}
+    #msform .form-group input[type="radio"]{margin:1vw 1vw 1vw 0px;}
+    #msform .action-button {width: 25vw;}
+    #progressbar li:before{ margin:0px 0px 5px 0px;}
+    #progressbar li:after{left:-100%;}
+    #progressbar li span{margin-left:-70%;}
+    #register-heading img{width:90%;}
 }

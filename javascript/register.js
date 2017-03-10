@@ -125,8 +125,8 @@ $(".submit").click(function(){
 	});
   
 //按submit後popup，popup的動畫從activePopup的css設定 
-  // $("#regpopup").fadeIn();
-  // $("#regpopup").addClass('activePopup');
+  $("#regpopup").fadeIn();
+  $("#regpopup").addClass('activePopup');
 	return false;
 })
 
@@ -134,3 +134,12 @@ $(".submit").click(function(){
 $(document).on('click', "#regpopBtn", function() {
   location.href = "index.html";
 });
+
+// 查看尺寸表
+$("#checkSize").on("click", function(){
+  $("#clothSize").addClass('activePopup');
+  $("#clothSize").fadeIn(500);
+})
+$("#clothSize .closePopup").on('click', function(){
+  $("#clothSize").fadeOut('fast');
+})

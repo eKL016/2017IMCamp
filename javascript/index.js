@@ -6,9 +6,17 @@ $("#myBtnCheck").on('click', function(){
   $("#checkSubmit").show();
   $("#popupCheck #checkImg").hide();
 });
+$("#mobile-check-btn").on('click', function(){
+  $("#popupCheck").addClass('activePopup');
+  $("#popupCheck").fadeIn();
+  $("#popupCheck div").show();
+  $("#checkSubmit").show();
+  $("#popupCheck #checkImg").hide();
+});
 // 按右上角的叉叉，popup關閉
 $('body').on('click','.closePopup', function() {
   $("#popupCheck").fadeOut();
+  $("#popupCheck #checkImg").empty();
 });
 // 按下方的"Check"，會回傳報名狀況
 $("#checkSubmit").on('click', function(){
@@ -16,44 +24,47 @@ $("#checkSubmit").on('click', function(){
   $("#checkSubmit").hide();
   $("#popupCheck #checkImg").fadeIn();
   // if(報名成功)
-    $("#popupCheck #checkImg").html("報名成功");
+    $("#popupCheck #checkImg").append("<img src='./photo/check.png' style='width:80%;margin:auto;'><div>恭喜完成報名!<br>錄取名單將於5/15公布於粉專</div>");
   // else //尚未報名或失敗
-    // $("#popupCheck #checkImg").html("尚未報名");
+    // $("#popupCheck #checkImg").append("<img src='./photo/not.png' style='width:80%;margin:auto;'><div>尚未報名<br>若有問題請洽FB粉專</div>");
 });
 // 立即報名的按鈕 -> 報名頁面
 $("#myBtnRegister").on('click',function(){
   location.href = "register.html";
+});
+$("#mobile-register-btn").on("click",function(){
+  location.href = "register.html"
 });
 //歷年回顧 : photo gallery 
 var now = 0;
 $('#photoCircle div').on('click', function(){
   $('#photoCircle div').css('background', 'none');
   $(this).css('background', 'white');
-  $("#review .cell-3 img").hide();
+  $(".reviewPhoto img").hide();
   var index = $(this).index() + 1;
   if(index === 1){
     now = 0;
-    $('#review .cell-3 img:first-child').show();
+    $('.reviewPhoto img:first-child').show();
   }
   else{
     now = index - 1;
-    $('#review .cell-3 img:nth-child(' + index + ')').show();
+    $('.reviewPhoto img:nth-child(' + index + ')').show();
   }
 });
 //每隔3秒，photo gallery就會自動輪播到下一張照片
 function photoSlide(){
-  var last = $("#review .cell-3 img").length - 1;
-  $("#review .cell-3 img").hide();
+  var last = $(".reviewPhoto img").length - 1;
+  $(".reviewPhoto img").hide();
   $("#photoCircle div").css('background', 'none');
   if(now === last){
     now = 0;
     $("#photoCircle div:first-child").css('background', 'white');
-    $("#review .cell-3 img:first-child").fadeIn(3000);
+    $(".reviewPhoto img:first-child").fadeIn(500);
   }
   else{
     now = now + 1;
     $("#photoCircle div:nth-child(" + (now+1) + ")").css('background', 'white');
-    $("#review .cell-3 img:nth-child(" + (now+1) + ")").fadeIn(3000);
+    $(".reviewPhoto img:nth-child(" + (now+1) + ")").fadeIn(500);
   }
   setTimeout(photoSlide, 3000);
 }
@@ -78,7 +89,6 @@ $(document).ready(function() {
   
   $(".js-content").each(function(i){
     html  = '<div class="ProgressBar-bar js-ProgressBar-bar" style="margin:auto" >';
-    html += '<a href="#" data-scroll="' + $(this).attr('id') + '" class="ProgressBar-caption js-ProgressBar-caption">' + label[i] + '</a>';
     html += '<span class="ProgressBar-avancement js-ProgressBar-avancement"></span>';
     html += '<a href="#" data-scroll="' +  $(this).attr('id') + '"<span class="ProgressBar-circle js-ProgressBar-circle"></span></a>';
     html += '</div>';
@@ -91,7 +101,6 @@ $(document).ready(function() {
     var bottom = top + height;
 
     var floor = Math.floor(top / height);
-    console.log(top + " " + bottom + " floor: " + floor);
     
     // 設定不同section的顏色
     if(floor === 0){
@@ -146,7 +155,7 @@ $(document).ready(function() {
 
       if (top >= this_top && top <= this_bottom){ //如果現在滾動到一個js-content的中間
         percent = ((top - this_top) / height) * 100;
-        percent += 10;
+        // percent += 10;
       }else if (top > this_bottom) { //如果現在不在這個js-content中，即在後面的js-content中
         percent = 100;
       }
@@ -173,15 +182,12 @@ $(document).ready(function() {
 var loading;
 function myLoading() {
     loading = setTimeout(showPage, 0);
-    // $("#loading").fadeOut(1000);
-    // $("#loaderBack").fadeOut();
-    // $("#myDiv").show();
 }
 
 function showPage() {
-  document.getElementById("loading").style.display = "none";
-  document.getElementById("loaderBack").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
+  $("#loading").css('display', 'none');
+  $("#loaderBack").css('display', 'none');
+  $("#myDiv").css('display', 'block');
   AOS.init({
     duration: 1200,
   });
